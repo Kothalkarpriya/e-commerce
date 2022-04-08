@@ -1,3 +1,5 @@
+import { AiOutlineGithub, AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai";
+
 export default function Footer() {
   return (
     <footer className="footer text-align-center">
@@ -7,7 +9,7 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <i className="fa fa-linkedin-square"></i>
+        <AiFillLinkedin />
       </a>
       <a
         href="https://twitter.com/PriyaKothalkar"
@@ -15,7 +17,7 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <i className="fa fa-twitter-square"></i>
+        <AiFillTwitterCircle />
       </a>
       <a
         href="https://github.com/Kothalkarpriya"
@@ -23,7 +25,7 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <i className="fa fa-github-square"></i>
+        <AiOutlineGithub />
       </a>
       <p>Made by Priya Kothalkar</p>
     </footer>

@@ -1,3 +1,4 @@
+import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -19,12 +20,12 @@ export default function Navbar() {
           </li>
           <li className="list-ele">
             <a href="./assets/pages/wishlist-page.html" className="nav-link">
-              <i className="fa fa-heart-o"></i>
+              <AiOutlineHeart/>
             </a>
           </li>
           <li className="list-ele">
             <a href="./assets/pages/cart-page.html" className="nav-link">
-              <i className="fa fa-shopping-cart"></i>Cart
+              <AiOutlineShoppingCart/>Cart
             </a>
           </li>
         </ul>
