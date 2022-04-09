@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
+      
       <main className="main">
         <section className="main-section">
           <div className="product-cards">
