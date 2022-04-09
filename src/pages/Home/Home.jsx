@@ -1,3 +1,4 @@
+import React from "react";
 import { img1, img4, img5 } from "../../assets/images/image";
 import { Navbar, Footer } from "../../components/component";
 
