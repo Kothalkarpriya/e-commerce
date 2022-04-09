@@ -1,5 +1,6 @@
 import React from "react";
 import { img1, img4, img5 } from "../../assets/images/image";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -34,13 +35,13 @@ export default function Home() {
             <div className="container-horizon">
               <div className="oneside">
                 <div className="image">
-                  <a href="./assets/pages/product.html">
+                  <Link to="/ProductListing">
                     <img
                       src={img4}
                       alt="sunset-and-glass-mug"
                       className="img-horizon"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="text-horizon text-align-left">
                   <div className="text-badge">New Arrival</div>
@@ -53,13 +54,13 @@ export default function Home() {
             <div className="container-horizon">
               <div className="oneside">
                 <div className="image">
-                  <a href="/assets/pages/product.html">
+                  <Link to="/ProductListing">
                     <img
                       src={img5}
                       alt="sunset-and-glass-mug"
                       className="img-horizon"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="text-horizon text-align-left">
                   <div className="text-badge"> New Arrival</div>

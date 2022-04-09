@@ -1,11 +1,9 @@
 import React from "react";
 import { img4 } from "../../assets/images/image";
-import { Navbar, Footer } from "../../components/component";
 
 export default function ProductListing() {
   return (
     <div>
-    <Navbar />
       <main>
         <section className="main-section">
           <div className="product-container">
@@ -325,7 +323,6 @@ export default function ProductListing() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

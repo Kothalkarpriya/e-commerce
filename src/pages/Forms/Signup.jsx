@@ -1,11 +1,9 @@
 import React from "react";
-import { Navbar, Footer } from "../../components/component";
 import { Link } from "react-router-dom";
 
 export default function Signup() {
   return (
     <div>
-      <Navbar />
       <main className="main">
         <section className="main-section">
           <div className="signup">
@@ -83,7 +81,6 @@ export default function Signup() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

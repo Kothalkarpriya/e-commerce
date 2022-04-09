@@ -1,11 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import { Navbar, Footer } from "../../components/component";
 
 export default function Login() {
   return (
     <div>
-    <Navbar />
       <main className="main">
         <section className="main-section">
           <div className="login">
@@ -41,7 +39,6 @@ export default function Login() {
                 <button className="login-btn">Login</button>
               </div>
             </form>
-
             <div className="input-block">
               <Link to="/Signup" className="login-to-signup">
                 Create New Account
@@ -51,7 +48,6 @@ export default function Login() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

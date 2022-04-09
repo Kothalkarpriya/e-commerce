@@ -1,11 +1,9 @@
 import React from "react";
 import { img4 } from "../../assets/images/image";
-import { Navbar, Footer } from "../../components/component";
 
 export default function WishList() {
   return (
     <div>
-    <Navbar />
       <main>
         <section className="main-section">
           <div className="prod-heading upper-text">My Wishlist</div>
@@ -99,7 +97,6 @@ export default function WishList() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
