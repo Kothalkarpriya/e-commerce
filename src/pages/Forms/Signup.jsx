@@ -6,13 +6,13 @@ export default function Signup() {
   return (
     <div>
       <Navbar />
-      <main class="main">
-        <section class="main-section">
-          <div class="signup">
-            <h2 class="heading">Signup</h2>
-            <form action="" class="signup-form" id="signup">
-              <div class="input-block-name">
-                <div class="input-block">
+      <main className="main">
+        <section className="main-section">
+          <div className="signup">
+            <h2 className="heading">Signup</h2>
+            <form action="" className="signup-form" id="signup">
+              <div className="input-block-name">
+                <div className="input-block">
                   <label for="#input-name">First Name</label>
                   <input
                     type="text"
@@ -21,7 +21,7 @@ export default function Signup() {
                     required
                   />
                 </div>
-                <div class="input-block">
+                <div className="input-block">
                   <label for="#input-lastname">Last Name</label>
                   <input
                     type="text"
@@ -31,7 +31,7 @@ export default function Signup() {
                   />
                 </div>
               </div>
-              <div class="input-block">
+              <div className="input-block">
                 <label for="#input-email">Email Address</label>
                 <input
                   type="email"
@@ -40,44 +40,44 @@ export default function Signup() {
                   required
                 />
               </div>
-              <div class="input-block">
+              <div className="input-block">
                 <label for="input-pass">Password</label>
                 <input
                   type="password"
                   id="input-pass"
-                  class="input-password"
+                  className="input-password"
                   placeholder="*************"
                   required
                 />
               </div>
-              <div class="input-block">
+              <div className="input-block">
                 <label for="input-pass-again">Confirm Password</label>
                 <input
                   type="password"
                   id="input-pass-again"
-                  class="confirm-password"
+                  className="confirm-password"
                   placeholder="*************"
                   required
                 />
-                <div class="input-block-check">
+                <div className="input-block-check">
                   <input type="checkbox" name="checkPass" id="check-box" />
                   Show Password
                 </div>
               </div>
 
-              <div class="input-block-check">
-                <input type="checkbox" class="accept-ele" required />I accept
+              <div className="input-block-check">
+                <input type="checkbox" className="accept-ele" required />I accept
                 all Terms & condition
               </div>
-              <div class="input-block">
-                <button class="signup-btn">Create New Account</button>
+              <div className="input-block">
+                <button className="signup-btn">Create New Account</button>
               </div>
             </form>
 
-            <div class="input-block">
-              <Link to="/Login" class="signup-to-login">
+            <div className="input-block">
+              <Link to="/Login" className="signup-to-login">
                 Already have an account
-                <i class="fa fa-angle-right"></i>
+                <i className="fa fa-angle-right"></i>
               </Link>
             </div>
           </div>

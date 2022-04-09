@@ -7,90 +7,90 @@ export default function WishList() {
     <div>
     <Navbar />
       <main>
-        <section class="main-section">
-          <div class="prod-heading upper-text">My Wishlist</div>
-          <div class="wishlist-container">
-            <div class="card">
-              <div class="container">
-                <div class="image">
+        <section className="main-section">
+          <div className="prod-heading upper-text">My Wishlist</div>
+          <div className="wishlist-container">
+            <div className="card">
+              <div className="container">
+                <div className="image">
                   <img
                     src={img4}
                     alt="sunset-and-glass-mug"
-                    class="img"
+                    className="img"
                   />
-                  <div class="img-badge">
-                    <i class="fa fa-heart"></i>
+                  <div className="img-badge">
+                    <i className="fa fa-heart"></i>
                   </div>
                 </div>
-                <div class="text text-align-center">
-                  <p class="small-text">Women Western Top</p>
-                  <p class="large-text">Rs.600</p>
+                <div className="text text-align-center">
+                  <p className="small-text">Women Western Top</p>
+                  <p className="large-text">Rs.600</p>
                 </div>
-                <div class="card-buttons">
-                  <button type="submit" class="btn card-btn-items">
+                <div className="card-buttons">
+                  <button type="submit" className="btn card-btn-items">
                     Move to Cart
                   </button>
                 </div>
               </div>
-              <div class="container">
-                <div class="image">
+              <div className="container">
+                <div className="image">
                   <img
                     src={img4}
                     alt="sunset-and-glass-mug"
-                    class="img"
+                    className="img"
                   />
-                  <div class="img-badge">
-                    <i class="fa fa-heart"></i>
+                  <div className="img-badge">
+                    <i className="fa fa-heart"></i>
                   </div>
                 </div>
-                <div class="text text-align-center">
-                  <p class="small-text">Women Western Top</p>
-                  <p class="large-text">Rs.600</p>
+                <div className="text text-align-center">
+                  <p className="small-text">Women Western Top</p>
+                  <p className="large-text">Rs.600</p>
                 </div>
-                <div class="card-buttons">
-                  <button type="submit" class="btn card-btn-items">
+                <div className="card-buttons">
+                  <button type="submit" className="btn card-btn-items">
                     Move to Cart
                   </button>
                 </div>
               </div>
-              <div class="container">
-                <div class="image">
+              <div className="container">
+                <div className="image">
                   <img
                     src={img4}
                     alt="sunset-and-glass-mug"
-                    class="img"
+                    className="img"
                   />
-                  <div class="img-badge">
-                    <i class="fa fa-heart"></i>
+                  <div className="img-badge">
+                    <i className="fa fa-heart"></i>
                   </div>
                 </div>
-                <div class="text text-align-center">
-                  <p class="small-text">Women Western Top</p>
-                  <p class="large-text">Rs.600</p>
+                <div className="text text-align-center">
+                  <p className="small-text">Women Western Top</p>
+                  <p className="large-text">Rs.600</p>
                 </div>
-                <div class="card-buttons">
-                  <button type="submit" class="btn card-btn-items">
+                <div className="card-buttons">
+                  <button type="submit" className="btn card-btn-items">
                     Move to Cart
                   </button>
                 </div>
               </div>
-              <div class="container">
-                <div class="image">
+              <div className="container">
+                <div className="image">
                   <img
                     src={img4}
                     alt="sunset-and-glass-mug"
-                    class="img"
+                    className="img"
                   />
-                  <div class="img-badge">
-                    <i class="fa fa-heart"></i>
+                  <div className="img-badge">
+                    <i className="fa fa-heart"></i>
                   </div>
                 </div>
-                <div class="text text-align-center">
-                  <p class="small-text">Women Western Top</p>
-                  <p class="large-text">Rs.600</p>
+                <div className="text text-align-center">
+                  <p className="small-text">Women Western Top</p>
+                  <p className="large-text">Rs.600</p>
                 </div>
-                <div class="card-buttons">
-                  <button type="submit" class="btn card-btn-items">
+                <div className="card-buttons">
+                  <button type="submit" className="btn card-btn-items">
                     Move to Cart
                   </button>
                 </div>

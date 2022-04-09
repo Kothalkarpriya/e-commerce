@@ -1,12 +1,9 @@
 import React from "react";
 import { img1, img4, img5 } from "../../assets/images/image";
-import { Navbar, Footer } from "../../components/component";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
-      
       <main className="main">
         <section className="main-section">
           <div className="product-cards">
@@ -75,7 +72,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -7,15 +7,15 @@ export default function ProductListing() {
     <div>
     <Navbar />
       <main>
-        <section class="main-section">
-          <div class="product-container">
-            <aside class="filter-aside">
-              <div class="prod-head">
-                <div class="prod-brand">Filter</div>
-                <div class="prod-clear">Clear</div>
+        <section className="main-section">
+          <div className="product-container">
+            <aside className="filter-aside">
+              <div className="prod-head">
+                <div className="prod-brand">Filter</div>
+                <div className="prod-clear">Clear</div>
               </div>
-              <div class="prod-price">
-                <div class="filter-heading">Price</div>
+              <div className="prod-price">
+                <div className="filter-heading">Price</div>
                 <input
                   type="range"
                   value="35"
@@ -26,22 +26,22 @@ export default function ProductListing() {
                 />
                 <output>500</output>
               </div>
-              <div class="prod-category">
-                <div class="filter-heading">Category</div>
-                <ul class="filter-list">
-                  <li class="filter-list-item">
+              <div className="prod-category">
+                <div className="filter-heading">Category</div>
+                <ul className="filter-list">
+                  <li className="filter-list-item">
                     <label>
                       <input type="radio" name="men-cloth" />
                       Men
                     </label>
                   </li>
-                  <li class="filter-list-item">
+                  <li className="filter-list-item">
                     <label for="">
                       <input type="radio" name="women-cloth" />
                       Women
                     </label>
                   </li>
-                  <li class="filter-list-item">
+                  <li className="filter-list-item">
                     <label for="">
                       <input type="radio" name="kid-cloth" />
                       Kid
@@ -49,272 +49,272 @@ export default function ProductListing() {
                   </li>
                 </ul>
               </div>
-              <div class="prod-rating">
-                <div class="filter-heading">Rating</div>
-                <ul class="filter-list">
-                  <li class="filter-list-item">
+              <div className="prod-rating">
+                <div className="filter-heading">Rating</div>
+                <ul className="filter-list">
+                  <li className="filter-list-item">
                     <label>
                       <input type="checkbox" name="men-cloth" />
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
                     </label>
                   </li>
-                  <li class="filter-list-item">
+                  <li className="filter-list-item">
                     <label>
                       <input type="checkbox" name="men-cloth" />
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star-half-o"></i>
                     </label>
                   </li>
-                  <li class="filter-list-item">
+                  <li className="filter-list-item">
                     <label>
                       <input type="checkbox" name="men-cloth" />
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star-half-o"></i>
+                      <i className="fa fa-star-o"></i>
                     </label>
                   </li>
-                  <li class="filter-list-item">
+                  <li className="filter-list-item">
                     <label>
                       <input type="checkbox" name="men-cloth" />
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                      <i class="fa fa-star-o"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star-half-o"></i>
+                      <i className="fa fa-star-o"></i>
+                      <i className="fa fa-star-o"></i>
                     </label>
                   </li>
-                  <li class="filter-list-item">
+                  <li className="filter-list-item">
                     <label>
                       <input type="checkbox" name="men-cloth" />
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                      <i class="fa fa-star-o"></i>
-                      <i class="fa fa-star-o"></i>
-                      <i class="fa fa-star-o"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star-half-o"></i>
+                      <i className="fa fa-star-o"></i>
+                      <i className="fa fa-star-o"></i>
+                      <i className="fa fa-star-o"></i>
                     </label>
                   </li>
                 </ul>
               </div>
             </aside>
-            <article class="products">
-              <div class="prod-heading upper-text">All Products</div>
-              <div class="product-card">
-                <div class="card">
-                  <div class="container">
-                    <div class="image">
+            <article className="products">
+              <div className="prod-heading upper-text">All Products</div>
+              <div className="product-card">
+                <div className="card">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>
                   </div>
-                  <div class="container">
-                    <div class="image">
+                  <div className="container">
+                    <div className="image">
                       <img
                         src={img4}
                         alt="sunset-and-glass-mug"
-                        class="img"
+                        className="img"
                       />
-                      <div class="img-badge">
-                        <i class="fa fa-heart"></i>
+                      <div className="img-badge">
+                        <i className="fa fa-heart"></i>
                       </div>
                     </div>
-                    <div class="text text-align-center">
-                      <p class="small-text">Women Western Top</p>
-                      <p class="large-text">Rs.600</p>
+                    <div className="text text-align-center">
+                      <p className="small-text">Women Western Top</p>
+                      <p className="large-text">Rs.600</p>
                     </div>
-                    <div class="card-buttons">
-                      <button type="submit" class="btn card-btn-items">
+                    <div className="card-buttons">
+                      <button type="submit" className="btn card-btn-items">
                         Add to Cart
                       </button>
                     </div>

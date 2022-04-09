@@ -6,12 +6,12 @@ export default function Login() {
   return (
     <div>
     <Navbar />
-      <main class="main">
-        <section class="main-section">
-          <div class="login">
-            <h2 class="heading">Login</h2>
-            <form action="" class="login-form" id="login">
-              <div class="input-block">
+      <main className="main">
+        <section className="main-section">
+          <div className="login">
+            <h2 className="heading">Login</h2>
+            <form action="" className="login-form" id="login">
+              <div className="input-block">
                 <label for="#input-email">Email Address</label>
                 <input
                   type="email"
@@ -20,32 +20,32 @@ export default function Login() {
                   required
                 />
               </div>
-              <div class="input-block">
+              <div className="input-block">
                 <label for="input-pass">Password</label>
                 <input
                   type="password"
                   id="input-pass"
-                  class="input-password"
+                  className="input-password"
                   placeholder="*************"
                   required
                 />
               </div>
-              <div class="input-block-check">
-                <input type="checkbox" class="accept-ele" required />
+              <div className="input-block-check">
+                <input type="checkbox" className="accept-ele" required />
                 Remember me
-                <Link to="/" class="btn-link">
+                <Link to="/" className="btn-link">
                   Forgot your Password?
                 </Link>
               </div>
-              <div class="input-block">
-                <button class="login-btn">Login</button>
+              <div className="input-block">
+                <button className="login-btn">Login</button>
               </div>
             </form>
 
-            <div class="input-block">
-              <Link to="/Signup" class="login-to-signup">
+            <div className="input-block">
+              <Link to="/Signup" className="login-to-signup">
                 Create New Account
-                <i class="fa fa-angle-right"></i>
+                <i className="fa fa-angle-right"></i>
               </Link>
             </div>
           </div>
