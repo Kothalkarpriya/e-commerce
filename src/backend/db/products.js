@@ -1,4 +1,5 @@
 import { v4 as uuid } from "uuid";
+import { img4, img5, img6 } from "../../assets/images/image";
 
 /**
  * Product Database can be added here.
@@ -8,23 +9,29 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    title: "You Can WIN",
-    author: "Shiv Khera",
-    price: "5000",
-    categoryName: "non-fiction",
+    imageUrl: { img4 },
+    isLiked: false,
+    rating: "4.3",
+    title: "Women Western Top",
+    price: "600",
+    categoryName: "women-cloth",
   },
   {
     _id: uuid(),
-    title: "You are Winner",
-    author: "Junaid Qureshi",
-    price: "3000",
-    categoryName: "horror",
+    imageUrl: { img5 },
+    isLiked: false,
+    rating: "4.2",
+    title: "Men Black Shirt",
+    price: "800",
+    categoryName: "men-cloth",
   },
   {
     _id: uuid(),
-    title: "Think and Grow Rich",
-    author: "Shiv Khera",
+    imageUrl: { img6 },
+    isLiked: false,
+    rating: "4",
+    title: "Kid Dungaree Set",
     price: "1000",
-    categoryName: "fiction",
+    categoryName: "kid-cloth",
   },
 ];
