@@ -1,11 +1,14 @@
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import React from "react";
+import {Link} from "react-router-dom";
+
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-brand upper-text">
-        <a href="/home.html" className="nav-brand-link">
+        <Link to="/" className="nav-brand-link">
           Shoppers Stop
-        </a>
+        </Link>
       </div>
       <div className="nav-collapse">
         <div className="hamburger">
@@ -14,19 +17,19 @@ export default function Navbar() {
         </div>
         <ul className="nav-list-group vert">
           <li className="list-ele">
-            <a href="./assets/pages/signup.html" className="nav-link">
+            <Link to="/Signup" className="nav-link">
               Login
-            </a>
+            </Link>
           </li>
           <li className="list-ele">
-            <a href="./assets/pages/wishlist-page.html" className="nav-link">
+            <Link to="/WishList" className="nav-link">
               <AiOutlineHeart/>
-            </a>
+            </Link>
           </li>
           <li className="list-ele">
-            <a href="./assets/pages/cart-page.html" className="nav-link">
+            <Link to="/Cart" className="nav-link">
               <AiOutlineShoppingCart/>Cart
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
