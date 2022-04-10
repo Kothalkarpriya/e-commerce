@@ -1,5 +1,5 @@
 import React from "react";
-import { img4 } from "../../assets/images/image";
+import { img4 } from "../../assests/image";
 
 export default function Cart() {
   return (

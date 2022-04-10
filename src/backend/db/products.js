@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { img4, img5, img6 } from "../../assets/images/image";
+import { img4, img5, img6 } from "../../assests/image";
 
 /**
  * Product Database can be added here.
@@ -9,7 +9,7 @@ import { img4, img5, img6 } from "../../assets/images/image";
 export const products = [
   {
     _id: uuid(),
-    imageUrl: { img4 },
+    imageUrl: {img4},
     isLiked: false,
     rating: "4.3",
     title: "Women Western Top",
@@ -18,7 +18,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: { img5 },
+    imageUrl: {img5},
     isLiked: false,
     rating: "4.2",
     title: "Men Black Shirt",
@@ -27,7 +27,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    imageUrl: { img6 },
+    imageUrl: {img6},
     isLiked: false,
     rating: "4",
     title: "Kid Dungaree Set",
