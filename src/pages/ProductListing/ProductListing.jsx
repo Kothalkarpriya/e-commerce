@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Filter, ProdCard } from "../../components/component";
-import { ProductContext } from "../../context/prodContext";
+import { GetProd } from "../../context/prodContext";
 
 export default function ProductListing() {
-  const prodList = useContext(ProductContext);
+  const prodList = GetProd();
   return (
     <div>
-      <main>
         <section className="main-section">
           <div className="product-container">
             <Filter />
@@ -17,6 +16,7 @@ export default function ProductListing() {
                   {prodList.map((item) => {
                     return (
                       <ProdCard
+                        id={item._id}
                         cardTitle={item.title}
                         cardPrice={item.price}
                         image={item.imageUrl}
@@ -28,7 +28,6 @@ export default function ProductListing() {
             </article>
           </div>
         </section>
-      </main>
     </div>
   );
 }
