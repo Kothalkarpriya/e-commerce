@@ -1,5 +1,5 @@
 import React from "react";
-import { img1, img4, img5 } from "../../assets/images/image";
+import { img1, img4, img5 } from "../../assests/image";
 import { Link } from "react-router-dom";
 
 export default function Home() {

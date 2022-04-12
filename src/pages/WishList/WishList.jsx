@@ -1,9 +1,9 @@
 import React from "react";
-import { img4 } from "../../assets/images/image";
+import { img4 } from "../../assests/image";
+import { AiTwotoneHeart } from "react-icons/ai";
 
 export default function WishList() {
   return (
-    <div>
       <main>
         <section className="main-section">
           <div className="prod-heading upper-text">My Wishlist</div>
@@ -17,7 +17,7 @@ export default function WishList() {
                     className="img"
                   />
                   <div className="img-badge">
-                    <i className="fa fa-heart"></i>
+                    <AiTwotoneHeart />
                   </div>
                 </div>
                 <div className="text text-align-center">
@@ -38,7 +38,7 @@ export default function WishList() {
                     className="img"
                   />
                   <div className="img-badge">
-                    <i className="fa fa-heart"></i>
+                    <AiTwotoneHeart />
                   </div>
                 </div>
                 <div className="text text-align-center">
@@ -59,7 +59,7 @@ export default function WishList() {
                     className="img"
                   />
                   <div className="img-badge">
-                    <i className="fa fa-heart"></i>
+                    <AiTwotoneHeart />
                   </div>
                 </div>
                 <div className="text text-align-center">
@@ -80,7 +80,7 @@ export default function WishList() {
                     className="img"
                   />
                   <div className="img-badge">
-                    <i className="fa fa-heart"></i>
+                    <AiTwotoneHeart />
                   </div>
                 </div>
                 <div className="text text-align-center">
@@ -97,6 +97,5 @@ export default function WishList() {
           </div>
         </section>
       </main>
-    </div>
   );
 }
