@@ -1,10 +1,10 @@
 import {
-  filterReducer,
   sortProd,
   ratingFun,
   CategoryHandler,
   priceFun,
-} from "../components/component";
+} from "../backend/utils/filterComp";
+import filterReducer from "../backend/utils/filterReducer";
 import { GetProd } from "./prodContext";
 import { createContext, useContext, useReducer } from "react";
 
@@ -23,10 +23,9 @@ const FilterContextPro = ({ children }) => {
 
   const [state, filterDispatch] = useReducer(filterReducer, {
     sort: "",
-    rating: 5,
+    rating: 1,
     category: [],
     maxPrice: 2000,
-    minPrice:0,
   });
 
   const filteredList = filter(

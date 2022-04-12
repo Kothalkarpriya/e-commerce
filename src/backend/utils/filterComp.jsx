@@ -12,13 +12,13 @@ function priceFun(state, prodList) {
 
 function sortProd(state, prodList) {
   switch (state.sort) {
-    case "RATING_A":
+    case "RATING_Ascending":
       return [...prodList].sort((a, b) => Number(a.rating) - Number(b.rating));
-    case "RATING_D":
+    case "RATING_Descending":
       return [...prodList].sort((a, b) => Number(b.rating) - Number(a.rating));
-    case "PRICE_A":
+    case "PRICE_Ascending":
       return [...prodList].sort((a, b) => Number(a.price) - Number(b.price));
-    case "PRICE_D":
+    case "PRICE_Descending":
       return [...prodList].sort((a, b) => Number(b.price) - Number(a.price));
     default:
       return prodList;
