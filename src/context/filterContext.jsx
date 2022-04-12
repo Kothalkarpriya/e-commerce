@@ -26,6 +26,7 @@ const FilterContextPro = ({ children }) => {
     rating: 5,
     category: [],
     maxPrice: 2000,
+    minPrice:0,
   });
 
   const filteredList = filter(

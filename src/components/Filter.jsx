@@ -25,6 +25,7 @@ export default function Filter() {
             min="500"
             max="2000"
             id="myRange"
+            className="default-slider"
             onClick={(e) =>
               filterDispatch({ type: "MAXPRICE", payload: e.target.value })
             }
@@ -162,10 +163,10 @@ export default function Filter() {
             <li className="filter-list-item">
               <input
                 name="sort"
-                checked={state.sort === "PRICE_A"}
+                checked={state.sort === "PRICE_Ascending"}
                 className="mg-sm"
                 type="radio"
-                value="PRICE_A"
+                value="PRICE_Ascending"
                 id="sortByPrice"
                 onClick={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
@@ -176,10 +177,10 @@ export default function Filter() {
             <li className="filter-list-item">
               <input
                 name="sort"
-                checked={state.sort === "PRICE_D"}
+                checked={state.sort === "PRICE_Descending"}
                 className="mg-sm"
                 type="radio"
-                value="PRICE_D"
+                value="PRICE_Descending"
                 id="sortByPrice"
                 onClick={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
@@ -191,9 +192,9 @@ export default function Filter() {
               <input
                 className="mg-sm"
                 type="radio"
-                checked={state.sort === "RATING_A"}
+                checked={state.sort === "RATING_Ascending"}
                 name="sort"
-                value="RATING_A"
+                value="RATING_Ascending"
                 id="sortByRating"
                 onClick={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
@@ -205,9 +206,9 @@ export default function Filter() {
               <input
                 className="mg-sm"
                 type="radio"
-                checked={state.sort === "RATING_D"}
+                checked={state.sort === "RATING_Descending"}
                 name="sort"
-                value="RATING_D"
+                value="RATING_Descending"
                 id="sortByRating"
                 onClick={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
