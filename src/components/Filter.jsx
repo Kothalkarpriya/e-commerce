@@ -11,7 +11,7 @@ export default function Filter() {
           <div className="prod-brand">Filter</div>
           <div
             className="prod-clear"
-            onClick={() => filterDispatch({ type: "RESET" })}
+            onChange={() => filterDispatch({ type: "RESET" })}
           >
             Clear
           </div>
@@ -26,7 +26,7 @@ export default function Filter() {
             max="2000"
             id="myRange"
             className="default-slider"
-            onClick={(e) =>
+            onChange={(e) =>
               filterDispatch({ type: "MAXPRICE", payload: e.target.value })
             }
           />
@@ -41,7 +41,7 @@ export default function Filter() {
                 name="shopping"
                 value="women-cloth"
                 checked={state.category.includes("women-cloth")}
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "CATEGORY", payload: e.target.value })
                 }
                 id="women-cloth"
@@ -54,7 +54,7 @@ export default function Filter() {
                 name="shopping"
                 value="men-cloth"
                 checked={state.category.includes("men-cloth")}
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "CATEGORY", payload: e.target.value })
                 }
                 id="men-cloth"
@@ -67,7 +67,7 @@ export default function Filter() {
                 name="shopping"
                 value="kid-cloth"
                 checked={state.category.includes("kid-cloth")}
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "CATEGORY", payload: e.target.value })
                 }
                 id="kid-cloth"
@@ -85,7 +85,7 @@ export default function Filter() {
                 value="4"
                 name="rating"
                 id="fourStar"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "RATINGS", payload: e.target.value })
                 }
                 checked={state.rating === "4"}
@@ -104,7 +104,7 @@ export default function Filter() {
                 value="3"
                 name="rating"
                 id="threeStar"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "RATINGS", payload: e.target.value })
                 }
                 checked={state.rating === "3"}
@@ -123,7 +123,7 @@ export default function Filter() {
                 value="2"
                 name="rating"
                 id="twoStar"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "RATINGS", payload: e.target.value })
                 }
                 checked={state.rating === "2"}
@@ -142,7 +142,7 @@ export default function Filter() {
                 value="1"
                 name="rating"
                 id="oneStar"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "RATINGS", payload: e.target.value })
                 }
                 checked={state.rating === "1"}
@@ -168,7 +168,7 @@ export default function Filter() {
                 type="radio"
                 value="PRICE_Ascending"
                 id="sortByPrice"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
                 }
               />
@@ -182,7 +182,7 @@ export default function Filter() {
                 type="radio"
                 value="PRICE_Descending"
                 id="sortByPrice"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
                 }
               />
@@ -196,7 +196,7 @@ export default function Filter() {
                 name="sort"
                 value="RATING_Ascending"
                 id="sortByRating"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
                 }
               />
@@ -210,7 +210,7 @@ export default function Filter() {
                 name="sort"
                 value="RATING_Descending"
                 id="sortByRating"
-                onClick={(e) =>
+                onChange={(e) =>
                   filterDispatch({ type: "SORT", payload: e.target.value })
                 }
               />
