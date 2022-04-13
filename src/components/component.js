@@ -4,11 +4,5 @@ import Filter from "./Filter";
 import ProdCard from "./ProdCard";
 import WishCard from "./WishCard";
 import AddDelBtn from "./AddDelBtn";
-export {
-  Navbar,
-  Footer,
-  Filter,
-  ProdCard,
-  WishCard,
-  AddDelBtn
-};
+import EmptyProd from "./EmptyProd";
+export { Navbar, Footer, Filter, ProdCard, WishCard, AddDelBtn, EmptyProd };
