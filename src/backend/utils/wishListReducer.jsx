@@ -7,7 +7,7 @@ function wishListReducer(state, action) {
         ...state,
         wishListItems: [...state.wishListItems, action.payload],
       };
-    case "WISH_REMOVE":
+    case "WISH_DEL":
       return {
         ...state,
         wishListItems: state.wishListItems.filter(
