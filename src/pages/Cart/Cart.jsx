@@ -1,36 +1,12 @@
 import React from "react";
-import { img4 } from "../../assests/image";
+import {CartCard} from "../../components/component";
 
 export default function Cart() {
   return (
     <section className="main-section">
       <div className="prod-heading upper-text">My Cart(1)</div>
       <div className="cart-container">
-        <article className="prod-in-cart">
-          <div className="image">
-            <img src={img4} alt="" />
-          </div>
-          <div className="prod-detail">
-            <div className="text text-align-left">
-              <p className="large-text">Women Western Top</p>
-              <p className="large-text">
-                Rs.600{" "}
-                <span className="text-lin-through grey-text">Rs.1000</span>
-              </p>
-              <p className="grey-text">40% OFF</p>
-              <p className="quant">
-                <label>Quantity: </label>
-                <i className="fa fa-plus"></i>
-                <input type="number" min={0} value="1" />
-                <i className="fa fa-minus"></i>
-              </p>
-            </div>
-            <div className="button">
-              <button className="btns upper-text">Remove from Cart</button>
-              <button className="btns upper-text">Move to wishlist</button>
-            </div>
-          </div>
-        </article>
+        <CartCard />
         <article className="prod-price-detail">
           <div className="price-heading upper-text large-text">
             price details
