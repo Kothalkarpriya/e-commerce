@@ -11,7 +11,7 @@ export default function Filter() {
           <div className="prod-brand">Filter</div>
           <div
             className="prod-clear"
-            onChange={() => filterDispatch({ type: "RESET" })}
+            onClick={() => filterDispatch({ type: "RESET" })}
           >
             Clear
           </div>
@@ -19,8 +19,8 @@ export default function Filter() {
         <div className="prod-price">
           <div className="filter-heading">Price</div>
           <input
-            type="radio"
-            value={state.maxPrice}
+            type="range"
+            value={state.price}
             name="sortby"
             min="500"
             max="2000"

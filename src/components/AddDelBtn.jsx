@@ -12,7 +12,8 @@ export default function AddDelBtn() {
         type="submit"
         className="btn card-btn-items"
         onClick={() =>
-          dispatchWish({ type: "WISH_DEL", payload: defaultState.defaultState })
+          // eslint-disable-next-line no-undef
+          dispatchWish({ type: "WISH_DEL", payload: defaultState })
         }
       >
         Delete From WishList
