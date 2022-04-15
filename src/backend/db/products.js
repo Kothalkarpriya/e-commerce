@@ -13,7 +13,7 @@ export const products = [
     isLiked: false,
     rating: 4,
     title: "Women Western Top",
-    price: "600",
+    price: "2000",
     categoryName: "women-cloth",
   },
   {
