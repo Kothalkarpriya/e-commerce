@@ -22,7 +22,7 @@ export const products = [
     isLiked: false,
     rating: 4,
     title: "Men Black Shirt",
-    price: "800",
+    price: "1000",
     categoryName: "men-cloth",
   },
   {
@@ -49,7 +49,7 @@ export const products = [
     isLiked: false,
     rating: 3,
     title: "Men Black Shirt",
-    price: "800",
+    price: "600",
     categoryName: "men-cloth",
   },
   {
@@ -58,7 +58,7 @@ export const products = [
     isLiked: false,
     rating: 3,
     title: "Kid Dungaree Set",
-    price: "1000",
+    price: "600",
     categoryName: "kid-cloth",
   },
   {
@@ -67,7 +67,7 @@ export const products = [
     isLiked: false,
     rating: 2,
     title: "Women Western Top",
-    price: "600",
+    price: "800",
     categoryName: "women-cloth",
   },
   {
@@ -76,7 +76,7 @@ export const products = [
     isLiked: false,
     rating: 2,
     title: "Men Black Shirt",
-    price: "800",
+    price: "600",
     categoryName: "men-cloth",
   },
   {
@@ -85,7 +85,7 @@ export const products = [
     isLiked: false,
     rating: 2,
     title: "Kid Dungaree Set",
-    price: "1000",
+    price: "500",
     categoryName: "kid-cloth",
   },
 ];
