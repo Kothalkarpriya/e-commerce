@@ -5,4 +5,15 @@ import ProdCard from "./ProdCard";
 import WishCard from "./WishCard";
 import AddDelBtn from "./AddDelBtn";
 import EmptyProd from "./EmptyProd";
-export { Navbar, Footer, Filter, ProdCard, WishCard, AddDelBtn, EmptyProd };
+
+import CartCard from "./CartCard";
+export {
+  Navbar,
+  Footer,
+  Filter,
+  ProdCard,
+  WishCard,
+  AddDelBtn,
+  EmptyProd,
+  CartCard,
+};

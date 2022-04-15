@@ -26,7 +26,7 @@ export default function Filter() {
             max="2000"
             id="myRange"
             className="default-slider"
-            onChange={(e) =>
+            onClick={(e) =>
               filterDispatch({ type: "MAXPRICE", payload: e.target.value })
             }
           />
@@ -41,7 +41,7 @@ export default function Filter() {
                 name="shopping"
                 value="women-cloth"
                 checked={state.category.includes("women-cloth")}
-                onChange={(e) =>
+                onClick={(e) =>
                   filterDispatch({ type: "CATEGORY", payload: e.target.value })
                 }
                 id="women-cloth"
@@ -54,7 +54,7 @@ export default function Filter() {
                 name="shopping"
                 value="men-cloth"
                 checked={state.category.includes("men-cloth")}
-                onChange={(e) =>
+                onClick={(e) =>
                   filterDispatch({ type: "CATEGORY", payload: e.target.value })
                 }
                 id="men-cloth"
@@ -67,7 +67,7 @@ export default function Filter() {
                 name="shopping"
                 value="kid-cloth"
                 checked={state.category.includes("kid-cloth")}
-                onChange={(e) =>
+                onClick={(e) =>
                   filterDispatch({ type: "CATEGORY", payload: e.target.value })
                 }
                 id="kid-cloth"

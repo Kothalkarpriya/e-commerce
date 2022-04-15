@@ -32,7 +32,7 @@ export default function ProdCard({
             <AiTwotoneHeart
               className="img-badge"
               onClick={() =>
-                dispatchWish({ type: "WISH_REMOVE", payload: defaultState })
+                dispatchWish({ type: "WISH_DEL", payload: defaultState })
               }
             />
           )}

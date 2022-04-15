@@ -8,7 +8,7 @@ export default function ProductListing() {
     prodList.map((item) => {
       return (
         <ProdCard
-        key={item._id}
+          key={item._id}
           id={item._id}
           cardTitle={item.title}
           cardPrice={item.price}

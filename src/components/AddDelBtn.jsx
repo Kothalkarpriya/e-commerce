@@ -1,7 +1,7 @@
 import React from "react";
 import { useWishList } from "../context/wishListContext";
 
-export default function AddDelBtn() {
+export default function AddDelBtn(defaultState) {
   const { dispatchWish } = useWishList();
   return (
     <div>
@@ -12,8 +12,7 @@ export default function AddDelBtn() {
         type="submit"
         className="btn card-btn-items"
         onClick={() =>
-          // eslint-disable-next-line no-undef
-          dispatchWish({ type: "WISH_DEL", payload: defaultState })
+          dispatchWish({ type: "WISH_DEL", payload: defaultState.defaultState })
         }
       >
         Delete From WishList
