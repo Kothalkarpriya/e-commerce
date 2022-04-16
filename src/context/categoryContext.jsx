@@ -1,18 +1,18 @@
 import { createContext, useContext } from "react";
 import useAxios from "../backend/utils/axiosProd.jsx";
 
-const categoryContext = createContext();
+const CategoryContext = createContext();
 
 function CategoryContextPro({ children }) {
   const { dataResponse, loading, error } = useAxios("/api/categories");
   const categories = dataResponse?.categories || [];
   return (
-    <categoryContext.Provider value={categories}>
+    <CategoryContext.Provider value={categories}>
       {children}
-    </categoryContext.Provider>
+    </CategoryContext.Provider>
   );
 }
 
-const GetCategory = () => useContext(categoryContext);
+const GetCategory = () => useContext(CategoryContext);
 
 export { CategoryContextPro, GetCategory };

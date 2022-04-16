@@ -1,5 +1,6 @@
 function ratingFun(state, prodList) {
   const { rating } = state;
+  // console.log(prodList);
   return rating === ""
     ? prodList
     : prodList.filter((product) => product.rating >= rating);
@@ -7,7 +8,7 @@ function ratingFun(state, prodList) {
 
 function priceFun(state, prodList) {
   const { maxPrice } = state;
-  return prodList?.filter((product) => product.price <= maxPrice)||[];
+  return prodList.filter((product) => product.price <= maxPrice)||[];
 }
 
 function sortProd(state, prodList) {

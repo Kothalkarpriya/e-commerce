@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {useWishList} from "../context/wishListContext";
+import {ItemInWishListCheck}from "../backend/utils/wishListReducer";
 
 export default function CartCard({ title, img, price }) {
   return (
@@ -11,7 +13,6 @@ export default function CartCard({ title, img, price }) {
           <p className="large-text">{title}</p>
           <p className="large-text">
             Rs.{price} 
-            {/* <span className="text-lin-through grey-text">Rs.{price}</span> */}
           </p>
           <p className="grey-text">40% OFF</p>
           <p className="quant">

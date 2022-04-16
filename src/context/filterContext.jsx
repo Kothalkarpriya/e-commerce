@@ -19,7 +19,7 @@ const filter =
   };
 
 const FilterContextPro = ({ children }) => {
-  const products = useProd();
+  const {products} = useProd();
 
   const [state, filterDispatch] = useReducer(filterReducer, {
     sort: "",
