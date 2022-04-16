@@ -15,7 +15,7 @@ export default function WishList() {
           id={item.id}
           sr={index + 1}
           prodName={item.title}
-          unitPrice={item.price}
+          price={item.price}
           img={item.imageUrl}
           Action={"prod"}
         />
@@ -28,12 +28,17 @@ export default function WishList() {
         <div className="prod-heading upper-text">My Wishlist</div>
         <div className="wishlist-container">
           <div className="card">
-            <WishCard
-              prodName={"Product Name"}
-              unitPrice={"Unit Price"}
-              img={"Image"}
-              Action={"Actions"}
-            />
+            {wishList.length ? (
+              <WishCard
+                sr={"#"}
+                prodName={"Product Name"}
+                unitPrice={"Unit Price"}
+                img={"Image"}
+                Action={"Actions"}
+              />
+            ) : (
+              ``
+            )}
 
             {wishList.length ? wishListMapping() : EmptyProd("WISHLIST")}
           </div>
