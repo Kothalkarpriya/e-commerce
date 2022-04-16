@@ -1,15 +1,27 @@
 import React from "react";
+import { ItemInCart } from "../backend/utils/cartReducer";
 import { ItemInWishListCheck } from "../backend/utils/wishListReducer";
 import { useWishList } from "../context/wishListContext";
+import { useCart } from "../context/cartContext";
+import { Link } from "react-router-dom";
 
 export default function ProdCard({ id, cardTitle, cardPrice, image }) {
   const { dispatchWish } = useWishList();
+  const { dispatchCart } = useCart();
   const defaultState = {
     id: id,
     imageUrl: image,
     title: cardTitle,
     price: cardPrice,
   };
+  const cartDefault = {
+    id: id,
+    imageUrl: image,
+    title: cardTitle,
+    price: cardPrice,
+    quantity: 1,
+  };
+
   return (
     <div className="container">
       <div className="image">
@@ -20,15 +32,30 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
         <p className="small-text">Rs.{cardPrice}</p>
       </div>
       <div className="card-buttons text-align-center">
-        <button type="submit" className="btn card-btn-items">
-          Add to Cart
-        </button>
+        {ItemInCart(id) === false ? (
+          <button
+            type="submit"
+            className="btn card-btn-items"
+            onChange={() =>
+              dispatchCart({ type: "CART_ADD", payload: cartDefault })
+            }
+            defaultChecked
+          >
+            Add to Cart
+          </button>
+        ) : (
+          <Link to="/Cart" className="btn card-btn-items">
+            Go to Cart
+          </Link>
+        )}
+        ;
         {ItemInWishListCheck(id) === false ? (
           <button
             className="btn card-btn-items"
-           onChange={() =>
+            onChange={() =>
               dispatchWish({ type: "WISH_ADD", payload: defaultState })
-            } defaultChecked
+            }
+            defaultChecked
           >
             Add To wishlist
           </button>
@@ -40,7 +67,7 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
             }
             defaultChecked
           >
-            Add To wishlist
+            Delete from WishList
           </button>
         )}
       </div>
