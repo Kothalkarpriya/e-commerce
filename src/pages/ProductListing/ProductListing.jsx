@@ -1,5 +1,5 @@
 import React from "react";
-import { Filter, ProdCard, EmptyProd } from "../../components/component";
+import { Filter, ProdCard } from "../../components/component";
 import { useFilters } from "../../context/filterContext";
 
 export default function ProductListing() {
