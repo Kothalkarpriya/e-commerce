@@ -1,6 +1,6 @@
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -23,12 +23,13 @@ export default function Navbar() {
           </li>
           <li className="list-ele">
             <Link to="/WishList" className="nav-link">
-              <AiOutlineHeart/>
+              <AiOutlineHeart />
             </Link>
           </li>
           <li className="list-ele">
             <Link to="/Cart" className="nav-link">
-              <AiOutlineShoppingCart/>Cart
+              <AiOutlineShoppingCart />
+              Cart
             </Link>
           </li>
         </ul>

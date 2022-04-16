@@ -1,101 +1,44 @@
 import React from "react";
-import { img4 } from "../../assests/image";
-import { AiTwotoneHeart } from "react-icons/ai";
+import { WishCard } from "../../components/component";
+import { useWishList } from "../../context/wishListContext";
+import { EmptyProd } from "../../components/component";
 
 export default function WishList() {
+  const { state } = useWishList();
+  const wishList = state.wishListItems;
+
+  const wishListMapping = () => {
+    wishList.map((item, index) => {
+      return (
+        <WishCard
+          key={item.id}
+          id={item.id}
+          sr={index + 1}
+          prodName={item.title}
+          unitPrice={item.price}
+          img={item.imageUrl}
+          Action={"prod"}
+        />
+      );
+    });
+  };
   return (
-      <main>
-        <section className="main-section">
-          <div className="prod-heading upper-text">My Wishlist</div>
-          <div className="wishlist-container">
-            <div className="card">
-              <div className="container">
-                <div className="image">
-                  <img
-                    src={img4}
-                    alt="sunset-and-glass-mug"
-                    className="img"
-                  />
-                  <div className="img-badge">
-                    <AiTwotoneHeart />
-                  </div>
-                </div>
-                <div className="text text-align-center">
-                  <p className="small-text">Women Western Top</p>
-                  <p className="large-text">Rs.600</p>
-                </div>
-                <div className="card-buttons">
-                  <button type="submit" className="btn card-btn-items">
-                    Move to Cart
-                  </button>
-                </div>
-              </div>
-              <div className="container">
-                <div className="image">
-                  <img
-                    src={img4}
-                    alt="sunset-and-glass-mug"
-                    className="img"
-                  />
-                  <div className="img-badge">
-                    <AiTwotoneHeart />
-                  </div>
-                </div>
-                <div className="text text-align-center">
-                  <p className="small-text">Women Western Top</p>
-                  <p className="large-text">Rs.600</p>
-                </div>
-                <div className="card-buttons">
-                  <button type="submit" className="btn card-btn-items">
-                    Move to Cart
-                  </button>
-                </div>
-              </div>
-              <div className="container">
-                <div className="image">
-                  <img
-                    src={img4}
-                    alt="sunset-and-glass-mug"
-                    className="img"
-                  />
-                  <div className="img-badge">
-                    <AiTwotoneHeart />
-                  </div>
-                </div>
-                <div className="text text-align-center">
-                  <p className="small-text">Women Western Top</p>
-                  <p className="large-text">Rs.600</p>
-                </div>
-                <div className="card-buttons">
-                  <button type="submit" className="btn card-btn-items">
-                    Move to Cart
-                  </button>
-                </div>
-              </div>
-              <div className="container">
-                <div className="image">
-                  <img
-                    src={img4}
-                    alt="sunset-and-glass-mug"
-                    className="img"
-                  />
-                  <div className="img-badge">
-                    <AiTwotoneHeart />
-                  </div>
-                </div>
-                <div className="text text-align-center">
-                  <p className="small-text">Women Western Top</p>
-                  <p className="large-text">Rs.600</p>
-                </div>
-                <div className="card-buttons">
-                  <button type="submit" className="btn card-btn-items">
-                    Move to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
+    <main>
+      <section className="main-section">
+        <div className="prod-heading upper-text">My Wishlist</div>
+        <div className="wishlist-container">
+          <div className="card">
+            <WishCard
+              prodName={"Product Name"}
+              unitPrice={"Unit Price"}
+              img={"Image"}
+              Action={"Actions"}
+            />
+
+            {wishList.length ? wishListMapping() : EmptyProd("WISHLIST")}
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
   );
 }

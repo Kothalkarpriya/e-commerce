@@ -2,17 +2,18 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Filter from "./Filter";
 import ProdCard from "./ProdCard";
-import filterReducer from "./filterRedcucer";
-import { CategoryHandler, sortProd, priceFun, ratingFun } from "./filterComp";
+import WishCard from "./WishCard";
+import AddDelBtn from "./AddDelBtn";
+import EmptyProd from "./EmptyProd";
 
+import CartCard from "./CartCard";
 export {
   Navbar,
   Footer,
   Filter,
   ProdCard,
-  filterReducer,
-  CategoryHandler,
-  sortProd,
-  priceFun,
-  ratingFun,
+  WishCard,
+  AddDelBtn,
+  EmptyProd,
+  CartCard,
 };

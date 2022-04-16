@@ -1,9 +1,9 @@
-export function filterReducer(state, action) {
+export default function filterReducer(state, action) {
   const defaultState = {
     sort: "",
     rating: "",
     category: [],
-    maxPrice: 10000,
+    maxPrice: 2000,
   };
   switch (action.type) {
     case "RATINGS":
