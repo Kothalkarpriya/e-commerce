@@ -19,15 +19,15 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <CategoryContextPro>
-        <ProdContext>
-          <CartContextPro>
-            <WishListPro>
+        <CartContextPro>
+          <WishListPro>
+            <ProdContext>
               <FilterContextPro>
                 <App />
               </FilterContextPro>
-            </WishListPro>
-          </CartContextPro>
-        </ProdContext>
+            </ProdContext>
+          </WishListPro>
+        </CartContextPro>
       </CategoryContextPro>
     </BrowserRouter>
   </React.StrictMode>,

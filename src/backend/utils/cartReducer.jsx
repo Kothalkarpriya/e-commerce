@@ -5,7 +5,7 @@ function CartReducer(state, action) {
     case "CART_ADD":
       return {
         ...state,
-        CartItems: [...state.CartItemw, action.payload],
+        CartItems: [...state.CartItems, action.payload],
       };
     case "CART_DEL":
       return {

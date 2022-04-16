@@ -36,7 +36,7 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
           <button
             type="submit"
             className="btn card-btn-items"
-            onChange={() =>
+            onClick={() =>
               dispatchCart({ type: "CART_ADD", payload: cartDefault })
             }
             defaultChecked
@@ -49,10 +49,11 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
           </Link>
         )}
         ;
+        {console.log("hello")}
         {ItemInWishListCheck(id) === false ? (
           <button
             className="btn card-btn-items"
-            onChange={() =>
+            onClick={() =>
               dispatchWish({ type: "WISH_ADD", payload: defaultState })
             }
             defaultChecked
@@ -62,7 +63,7 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
         ) : (
           <button
             className="btn card-btn-items"
-            onChange={() =>
+            onClick={() =>
               dispatchWish({ type: "WISH_DEL", payload: defaultState })
             }
             defaultChecked
