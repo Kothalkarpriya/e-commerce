@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export default function useAxiox(endPoint) {
+export default function useAxios(endPoint) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [dataResponse, setDataResponse] = useState();
