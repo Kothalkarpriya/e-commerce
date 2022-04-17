@@ -1,12 +1,11 @@
 import React from "react";
-import { CartCard, EmptyProd, CartCheckOut } from "../../components/component";
+import { CartCard, EmptyProd } from "../../components/component";
 import { useCart } from "../../context/cartContext";
 
 export default function Cart() {
   const { state } = useCart();
   const Cart = state.CartItems;
 
-  console.log(Cart);
   const CartMapping = () => {
     return Cart.map((item) => {
       return (
@@ -26,8 +25,7 @@ export default function Cart() {
       <div className="prod-heading upper-text">My Cart(1)</div>
       <div className="cart-container">
         {Cart.length ? CartMapping() : EmptyProd("CARTLIST")}
-        <CartCheckOut />
-        {console.log("Cart age")}
+        
       </div>
     </section>
   );

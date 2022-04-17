@@ -5,10 +5,8 @@ import { useWishList } from "../../context/wishListContext";
 export default function WishList() {
   const { state } = useWishList();
   const wishList = state.wishListItems;
-  console.log(wishList);
-
   const wishListMapping = () => {
-    wishList.map((item, index) => {
+    return wishList.map((item, index) => {
       return (
         <WishCard
           key={item.id}
@@ -28,18 +26,7 @@ export default function WishList() {
         <div className="prod-heading upper-text">My Wishlist</div>
         <div className="wishlist-container">
           <div className="card">
-            {wishList.length ? (
-              <WishCard
-                sr={"#"}
-                prodName={"Product Name"}
-                price={"Unit Price"}
-                img={"Image"}
-                Action={"Actions"}
-              />
-            ) : (
-              ``
-            )}
-            {wishList.length !== 0 ? wishListMapping() : EmptyProd("WISHLIST")}
+            {wishList.length ? wishListMapping() : EmptyProd("WISHLIST")}
           </div>
         </div>
       </section>
