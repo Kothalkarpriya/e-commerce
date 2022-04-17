@@ -31,7 +31,7 @@ export default function CartCard({ id, title, img, price, quantity }) {
       <div className="prod-detail">
         <div className="text text-align-left">
           <p className="large-text">{title}</p>
-          <p className="large-text">Rs.{price * quantity}</p>
+          <p className="large-text">Rs.{price}</p>
           <p className="grey-text">40% OFF</p>
           <p className="quant">
             <label>Quantity: </label>
