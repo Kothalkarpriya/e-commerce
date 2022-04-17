@@ -1,31 +1,93 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useCart } from "../context/cartContext";
+import { useWishList } from "../context/wishListContext";
+import { ItemInWishListCheck } from "../backend/utils/wishListReducer";
+import { CartCheckOut } from "../components/component";
 
-export default function CartCard({ title, img, price }) {
+export default function CartCard({ id, title, image, price, quantity }) {
+  const { dispatchWish } = useWishList();
+  const [count, setCount] = useState(quantity);
+  const { dispatchCart } = useCart();
+  const cartDefault = {
+    id: id,
+    image: image,
+    title: title,
+    price: price,
+    quantity: quantity,
+  };
+
+  useEffect(() => {
+    count < 1 || isNaN(count) ? setCount(1) : setCount(count);
+    dispatchCart({
+      type: "CART_QUANTITY",
+      payload: { id: id, quantity: count },
+    });
+  }, [count, dispatchCart, id]);
+
   return (
     <article className="prod-in-cart">
       <div className="image">
-        <img src={img} alt={title} />
+        <img src={image} alt={title} />
       </div>
       <div className="prod-detail">
         <div className="text text-align-left">
           <p className="large-text">{title}</p>
-          <p className="large-text">
-            Rs.{price} 
-            {/* <span className="text-lin-through grey-text">Rs.{price}</span> */}
-          </p>
+          <p className="large-text">Rs.{price}</p>
           <p className="grey-text">40% OFF</p>
           <p className="quant">
             <label>Quantity: </label>
-            <i className="fa fa-plus"></i>
-            <input type="number" min={0} value="1" />
-            <i className="fa fa-minus"></i>
+            <button
+              className="btn btn-primary"
+              onClick={() => setCount(count - 1)}
+              defaultChecked
+            >
+              &nbsp;-&nbsp;
+            </button>
+            <input
+              type="text"
+              name="cartInput"
+              value={count}
+              onChange={(e) => {
+                setCount(e.target.value);
+              }}
+            />
+            <button
+              className="btn btn-primary"
+              onClick={() => setCount(count + 1)}
+              defaultChecked
+            >
+              &nbsp;+&nbsp;
+            </button>
           </p>
         </div>
         <div className="button">
-          <button className="btns upper-text">Remove from Cart</button>
-          <button className="btns upper-text">Move to wishlist</button>
+          <button
+            className="btns upper-text"
+            onClick={() =>
+              dispatchCart({
+                type: "CART_DEL",
+                payload: cartDefault,
+              })
+            }
+            defaultChecked
+          >
+            Remove from Cart
+          </button>
+          <button
+            className="btns upper-text"
+            onClick={
+              !ItemInWishListCheck(id)
+                ? () => dispatchWish({ type: "WISH_ADD", payload: cartDefault })
+                : () => {}
+            }
+            defaultChecked
+          >
+            Add to wishlist
+          </button>
         </div>
       </div>
+
+      <CartCheckOut />
     </article>
   );
 }

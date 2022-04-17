@@ -4,11 +4,11 @@ import { wishListReducer } from "../backend/utils/wishListReducer";
 const WishListContext = createContext();
 
 function WishListPro({ children }) {
-  const [state, dispathWish] = useReducer(wishListReducer, {
+  const [state, dispatchWish] = useReducer(wishListReducer, {
     wishListItems: [],
   });
   return (
-    <WishListContext.Provider value={{ state, dispathWish }}>
+    <WishListContext.Provider value={{ state, dispatchWish }}>
       {children}
     </WishListContext.Provider>
   );

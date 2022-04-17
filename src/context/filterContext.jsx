@@ -5,7 +5,7 @@ import {
   priceFun,
 } from "../backend/utils/filterComp";
 import filterReducer from "../backend/utils/filterReducer";
-import { GetProd } from "./prodContext";
+import { useProd } from "./prodContext";
 import { createContext, useContext, useReducer } from "react";
 
 const FilterContext = createContext();
@@ -19,7 +19,7 @@ const filter =
   };
 
 const FilterContextPro = ({ children }) => {
-  const products = GetProd();
+  const {products} = useProd();
 
   const [state, filterDispatch] = useReducer(filterReducer, {
     sort: "",
