@@ -3,13 +3,13 @@ import { useCart } from "../context/cartContext";
 import { useWishList } from "../context/wishListContext";
 import { ItemInWishListCheck } from "../backend/utils/wishListReducer";
 
-export default function CartCard({ id, title, img, price, quantity }) {
+export default function CartCard({ id, title, image, price, quantity }) {
   const { dispatchWish } = useWishList();
   const [count, setCount] = useState(quantity);
   const { dispatchCart } = useCart();
   const cartDefault = {
     id: id,
-    imageUrl: img,
+    image: image,
     title: title,
     price: price,
     quantity: quantity,
@@ -26,8 +26,9 @@ export default function CartCard({ id, title, img, price, quantity }) {
   return (
     <article className="prod-in-cart">
       <div className="image">
-        <img src={img} alt={title} />
+        <img src={image} alt={title} />
       </div>
+      {console.log("Cart card")}
       <div className="prod-detail">
         <div className="text text-align-left">
           <p className="large-text">{title}</p>
@@ -63,8 +64,8 @@ export default function CartCard({ id, title, img, price, quantity }) {
           <button
             className="btns upper-text"
             onClick={() =>
-              dispatchWish({
-                type: "CART_REMOVE",
+              dispatchCart({
+                type: "CART_DEL",
                 payload: cartDefault,
               })
             }

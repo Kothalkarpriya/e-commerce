@@ -6,8 +6,9 @@ export default function Cart() {
   const { state } = useCart();
   const Cart = state.CartItems;
 
+  console.log(Cart);
   const CartMapping = () => {
-    Cart.map((item) => {
+    return Cart.map((item) => {
       return (
         <CartCard
           key={item.id}
@@ -26,6 +27,7 @@ export default function Cart() {
       <div className="cart-container">
         {Cart.length ? CartMapping() : EmptyProd("CARTLIST")}
         <CartCheckOut />
+        {console.log("Cart age")}
       </div>
     </section>
   );
