@@ -49,7 +49,7 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
           </Link>
         )}
         ;
-        {console.log("hello")}
+        
         {ItemInWishListCheck(id) === false ? (
           <button
             className="btn card-btn-items"

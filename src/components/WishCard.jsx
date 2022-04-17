@@ -1,12 +1,12 @@
 import React from "react";
 import { AddDelBtn } from "./component";
 
-export default function WishCard({ id, img, prodName, unitPrice, Action }) {
+export default function WishCard({ id, img, prodName, price, Action }) {
   const defaultState = {
     id: id,
     imageUrl: img,
     title: prodName,
-    price: unitPrice,
+    price: price,
   };
   return (
     <div className="container">
@@ -19,7 +19,12 @@ export default function WishCard({ id, img, prodName, unitPrice, Action }) {
       </div>
       <div className="text text-align-center">
         <p className="small-text">{prodName}</p>
-        <p className="large-text">{unitPrice}</p>
+
+        {price === "Unit Price" ? (
+          <>{price}</>
+        ) : (
+          <p className="large-text">{price}</p>
+        )}
       </div>
       <div className="card-buttons">
         {Action === "Actions" ? (
