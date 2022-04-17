@@ -1,11 +1,11 @@
 import React from "react";
-import { WishCard } from "../../components/component";
+import { WishCard, EmptyProd } from "../../components/component";
 import { useWishList } from "../../context/wishListContext";
-import { EmptyProd } from "../../components/component";
 
 export default function WishList() {
   const { state } = useWishList();
   const wishList = state.wishListItems;
+  console.log(wishList);
 
   const wishListMapping = () => {
     wishList.map((item, index) => {
@@ -32,15 +32,14 @@ export default function WishList() {
               <WishCard
                 sr={"#"}
                 prodName={"Product Name"}
-                unitPrice={"Unit Price"}
+                price={"Unit Price"}
                 img={"Image"}
                 Action={"Actions"}
               />
             ) : (
               ``
             )}
-
-            {wishList.length ? wishListMapping() : EmptyProd("WISHLIST")}
+            {wishList.length !== 0 ? wishListMapping() : EmptyProd("WISHLIST")}
           </div>
         </div>
       </section>

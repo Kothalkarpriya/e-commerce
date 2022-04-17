@@ -38,6 +38,7 @@ export default function CartCard({ id, title, img, price, quantity }) {
             <button
               className="btn btn-primary"
               onClick={() => setCount(count - 1)}
+              defaultChecked
             >
               &nbsp;-&nbsp;
             </button>
@@ -52,6 +53,7 @@ export default function CartCard({ id, title, img, price, quantity }) {
             <button
               className="btn btn-primary"
               onClick={() => setCount(count + 1)}
+              defaultChecked
             >
               &nbsp;+&nbsp;
             </button>
@@ -66,6 +68,7 @@ export default function CartCard({ id, title, img, price, quantity }) {
                 payload: cartDefault,
               })
             }
+            defaultChecked
           >
             Remove from Cart
           </button>
@@ -76,6 +79,7 @@ export default function CartCard({ id, title, img, price, quantity }) {
                 ? () => dispatchWish({ type: "WISH_ADD", payload: cartDefault })
                 : () => {}
             }
+            defaultChecked
           >
             Add to wishlist
           </button>

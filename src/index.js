@@ -18,17 +18,17 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CategoryContextPro>
-        <CartContextPro>
-          <WishListPro>
-            <ProdContext>
+      <ProdContext>
+        <CategoryContextPro>
+          <CartContextPro>
+            <WishListPro>
               <FilterContextPro>
                 <App />
               </FilterContextPro>
-            </ProdContext>
-          </WishListPro>
-        </CartContextPro>
-      </CategoryContextPro>
+            </WishListPro>
+          </CartContextPro>
+        </CategoryContextPro>
+      </ProdContext>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
