@@ -19,6 +19,6 @@ export default function useAxiox(endPoint) {
         setLoading(false);
       }
     })();
-  }, []);
+  }, [endPoint]);
   return { loading, error, dataResponse };
 }

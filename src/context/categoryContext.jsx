@@ -4,7 +4,7 @@ import useAxios from "../backend/utils/axiosProd.jsx";
 const CategoryContext = createContext();
 
 function CategoryContextPro({ children }) {
-  const { dataResponse, loading, error } = useAxios("/api/categories");
+  const { dataResponse } = useAxios("/api/categories");
   const categories = dataResponse?.categories || [];
   return (
     <CategoryContext.Provider value={categories}>
