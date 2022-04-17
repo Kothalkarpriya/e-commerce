@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCart } from "../context/cartContext";
 import { useWishList } from "../context/wishListContext";
 import { ItemInWishListCheck } from "../backend/utils/wishListReducer";
+import { CartCheckOut } from "../components/component";
 
 export default function CartCard({ id, title, image, price, quantity }) {
   const { dispatchWish } = useWishList();
@@ -28,7 +29,6 @@ export default function CartCard({ id, title, image, price, quantity }) {
       <div className="image">
         <img src={image} alt={title} />
       </div>
-      {console.log("Cart card")}
       <div className="prod-detail">
         <div className="text text-align-left">
           <p className="large-text">{title}</p>
@@ -86,6 +86,8 @@ export default function CartCard({ id, title, image, price, quantity }) {
           </button>
         </div>
       </div>
+
+      <CartCheckOut />
     </article>
   );
 }

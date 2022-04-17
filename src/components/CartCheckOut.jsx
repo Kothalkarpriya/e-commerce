@@ -20,7 +20,6 @@ export default function CartCheckOut() {
       <div className="price-heading upper-text large-text">
         Checkout details
       </div>
-      {console.log("checkout page")}
       <div className="table">
         <table>
           <tbody>
