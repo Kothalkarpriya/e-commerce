@@ -1,20 +1,12 @@
 import "./App.css";
 import { Navbar, Footer } from "./components/component";
-import { Home,WishList, ProductListing, Cart, Login, Signup } from "./pages";
-import { Routes, Route } from "react-router-dom";
+import Routespath from "./routes/Routespath";
 
 function App() {
   return (
     <div>
-    <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Cart" element={<Cart />} />
-        <Route path="/WishList" element={<WishList />} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/ProductListing" element={<ProductListing />} />
-        <Route path="/login" element={<Login />} />
-      </Routes> 
+      <Navbar />
+      <Routespath />
       <Footer />
     </div>
   );

@@ -53,7 +53,7 @@ body {
     list-style: none;
 }
 
-.nav-list-group .list-ele {
+.nav-list-group .list-ele, .vert .list-ele button {
     color: var(--little-dark-grey);
     display: inline;
     font-size: large;
@@ -61,7 +61,10 @@ body {
     margin:10px;
 }
 
-.nav-list-group .list-ele a.nav-link {
+.vert .list-ele button {
+    margin: 0;
+}
+.nav-list-group .list-ele a.nav-link , .nav-list-group .list-ele button{
     text-decoration: none;
     color: var(--back-color);
     background-color: var(--little-dark-grey);

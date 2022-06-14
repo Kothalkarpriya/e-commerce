@@ -1,8 +1,10 @@
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/context";
 
 export default function Navbar() {
+  const { logout, isLoggedIn } = useAuth();
   return (
     <nav className="navbar">
       <div className="nav-brand upper-text">
@@ -17,9 +19,15 @@ export default function Navbar() {
         </div>
         <ul className="nav-list-group vert">
           <li className="list-ele">
-            <Link to="/login" className="nav-link">
-              Login
-            </Link>
+            {isLoggedIn ? (
+              <button to="/" className="nav-link" onClick={() => logout()}>
+                Logout
+              </button>
+            ) : (
+              <Link to="/login" className="nav-link">
+                Login
+              </Link>
+            )}
           </li>
           <li className="list-ele">
             <Link to="/WishList" className="nav-link">
