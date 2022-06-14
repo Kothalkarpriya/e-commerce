@@ -1,30 +1,59 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 export default function Login() {
+  const [user, setUser] = useState({
+    email: "priyakothalkar@gmail.com",
+    password: "priya123",
+  });
+
+  const { login } = useAuth();
+
+  const changeInputHandler = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    login(user);
+  };
   return (
     <div>
       <main className="main">
         <section className="main-section">
           <div className="login">
             <h2 className="heading">Login</h2>
-            <form action="" className="login-form" id="login">
+            <form
+              action="#"
+              className="login-form"
+              id="login"
+              onSubmit={submit}
+            >
               <div className="input-block">
-                <label for="#input-email">Email Address</label>
+                <label htmlFor="#input-email">Email Address</label>
                 <input
                   type="email"
                   id="input-email"
                   placeholder="username@email.com"
                   required
+                  name="email"
+                  value={user.email}
+                  // eslint-disable-next-line no-undef
+                  onChange={(e) => changeInputHandler(e, email)}
                 />
               </div>
               <div className="input-block">
-                <label for="input-pass">Password</label>
+                <label htmlFor="input-pass">Password</label>
                 <input
                   type="password"
+                  name="password"
                   id="input-pass"
                   className="input-password"
                   placeholder="*************"
+                  value={user.password}
+                  // eslint-disable-next-line no-undef
+                  onChange={(e) => changeInputHandler(e, password)}
                   required
                 />
               </div>
@@ -36,7 +65,9 @@ export default function Login() {
                 </Link>
               </div>
               <div className="input-block">
-                <button className="login-btn">Login</button>
+                <button className="login-btn" type="submit">
+                  Login
+                </button>
               </div>
             </form>
             <div className="input-block">

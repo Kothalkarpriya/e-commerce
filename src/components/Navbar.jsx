@@ -17,7 +17,7 @@ export default function Navbar() {
         </div>
         <ul className="nav-list-group vert">
           <li className="list-ele">
-            <Link to="/Signup" className="nav-link">
+            <Link to="/login" className="nav-link">
               Login
             </Link>
           </li>

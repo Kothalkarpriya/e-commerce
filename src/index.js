@@ -10,6 +10,7 @@ import {
   CartContextPro,
   ProdContext,
   CategoryContextPro,
+  AuthContextProvider,
 } from "./context/context";
 
 // Call make Server
@@ -18,17 +19,19 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ProdContext>
-        <CategoryContextPro>
-          <CartContextPro>
-            <WishListPro>
-              <FilterContextPro>
-                <App />
-              </FilterContextPro>
-            </WishListPro>
-          </CartContextPro>
-        </CategoryContextPro>
-      </ProdContext>
+      <AuthContextProvider>
+        <ProdContext>
+          <CategoryContextPro>
+            <CartContextPro>
+              <WishListPro>
+                <FilterContextPro>
+                  <App />
+                </FilterContextPro>
+              </WishListPro>
+            </CartContextPro>
+          </CategoryContextPro>
+        </ProdContext>
+      </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

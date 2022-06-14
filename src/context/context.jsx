@@ -1,9 +1,21 @@
-import { FilterContextPro } from "./filterContext";
-import { WishListPro } from "./wishListContext";
-import { CartContextPro } from "./cartContext";
-import {ProdContext} from "./prodContext";
-import {CategoryContextPro} from "./categoryContext";
+import { FilterContextPro, useFilters } from "./filterContext";
+import { WishListPro, useWishList } from "./wishListContext";
+import { CartContextPro, useCart } from "./cartContext";
+import { ProdContext, useProd } from "./prodContext";
+import { CategoryContextPro, GetCategory } from "./categoryContext";
+import { AuthContextProvider, useAuth } from "./AuthContext";
 
 export {
-    FilterContextPro, WishListPro, CartContextPro, ProdContext, CategoryContextPro
-}
+  FilterContextPro,
+  useFilters,
+  WishListPro,
+  useWishList,
+  CartContextPro,
+  useCart,
+  ProdContext,
+  useProd,
+  CategoryContextPro,
+  GetCategory,
+  AuthContextProvider,
+  useAuth,
+};
