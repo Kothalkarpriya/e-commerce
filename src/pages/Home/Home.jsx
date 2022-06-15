@@ -16,7 +16,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const explore = () => {
-    navigate(navigate("/ProductListing"));
+    navigate("/ProductListing");
   };
   return (
     <div>
