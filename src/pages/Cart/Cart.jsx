@@ -22,15 +22,15 @@ export default function Cart() {
   };
   return (
     <div className="sample">
-    <section className="main-section cart-page">
-      <article>
+      <section className="main-section ">
         <div className="prod-heading upper-text">My Cart</div>
-        <div className="cart-container">
-          {cart.length ? CartMapping() : EmptyProd("CARTLIST")}
-        </div>
-      </article>
-      {cart?.length && <CartCheckOut />}
-    </section>
+        <article className="cart-page">
+          <div className="cart-container">
+            {cart.length ? CartMapping() : EmptyProd("CARTLIST")}
+          </div>
+          {cart?.length && <CartCheckOut />}
+        </article>
+      </section>
     </div>
   );
 }

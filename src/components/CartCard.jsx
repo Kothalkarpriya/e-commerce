@@ -24,9 +24,7 @@ export default function CartCard({ id, title, image, price, quantity }) {
   return (
     <>
       <article className="prod-in-cart">
-        <div className="image">
           <img src={image} alt={title} />
-        </div>
         <div className="prod-detail">
           <div className="text text-align-left">
             <p className="large-text">{title}</p>

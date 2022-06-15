@@ -1,32 +1,50 @@
 import React from "react";
-import { img1, img4, img5 } from "../../assests/image";
-import { Link } from "react-router-dom";
+import {
+  img1,
+  img4,
+  img5,
+  img10,
+  imgm3,
+  img14,
+  img8,
+  imgm5,
+  imgm8,
+} from "../../assests/image";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  const explore = () => {
+    navigate(navigate("/ProductListing"));
+  };
   return (
     <div>
       <main className="main">
         <section className="main-section">
           <div className="product-cards">
-            <div className="img-cards">
-              <img src={img4} alt="women-top" className="image" />
+            <div className="img-cards" onClick={explore}>
+              <img src={imgm5} alt="women-top" className="image" />
             </div>
-            <div className="img-cards">
-              <img src={img4} alt="women-top" className="image" />
+            <div className="img-cards" onClick={explore}>
+              <img src={img10} alt="women-top" className="image" />
             </div>
-            <div className="img-cards">
-              <img src={img4} alt="women-top" className="image" />
+            <div className="img-cards" onClick={explore}>
+              <img src={imgm3} alt="women-top" className="image" />
             </div>
-            <div className="img-cards">
-              <img src={img4} alt="women-top" className="image" />
+            <div className="img-cards" onClick={explore}>
+              <img src={img8} alt="women-top" className="image" />
             </div>
-            <div className="img-cards">
-              <img src={img4} alt="women-top" className="image" />
+            <div className="img-cards" onClick={explore}>
+              <img src={img14} alt="women-top" className="image" />
+            </div>
+            <div className="img-cards" onClick={explore}>
+              <img src={imgm8} alt="women-top" className="image" />
             </div>
           </div>
         </section>
         <section className="main-section">
-          <div className="branding">
+          <div className="branding" onClick={explore}>
             <img src={img1} alt="" className="img-ad" />
           </div>
         </section>
@@ -45,7 +63,7 @@ export default function Home() {
                 </div>
                 <div className="text-horizon text-align-left">
                   <div className="text-badge">New Arrival</div>
-                  <h3>Summer Collection</h3>
+                  <h3>Explore Products</h3>
                   Check out our Best winter collection to stay warm in style
                   this season
                 </div>
@@ -64,8 +82,8 @@ export default function Home() {
                 </div>
                 <div className="text-horizon text-align-left">
                   <div className="text-badge"> New Arrival</div>
-                  <h3>Summer Collection</h3>
-                  Check out our Best winter collection to stay warm in style
+                  <h3>Explore Products</h3>
+                  Check out our Best Summer collection to stay warm in style
                   this season
                 </div>
               </div>
