@@ -1,13 +1,14 @@
 import React from "react";
 import { ItemInCart } from "../backend/utils/cartReducer";
 import { ItemInWishListCheck } from "../backend/utils/wishListReducer";
-import { useWishList } from "../context/wishListContext";
-import { useCart } from "../context/cartContext";
-import { Link } from "react-router-dom";
+import { useWishList, useCart } from "../context/context";
+import { useNavigate } from "react-router-dom";
+import { BsFillHeartFill, BsFillCartFill } from "react-icons/bs";
 
 export default function ProdCard({ id, cardTitle, cardPrice, image }) {
   const { dispatchWish } = useWishList();
   const { dispatchCart } = useCart();
+  const navigate = useNavigate();
   const defaultState = {
     id: id,
     imageUrl: image,
@@ -41,15 +42,17 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
             }
             defaultChecked
           >
-            Add to Cart
+            Add to <BsFillCartFill className="icon" />
           </button>
         ) : (
-          <Link to="/Cart" className="btn card-btn-items">
-            Go to Cart
-          </Link>
+          <button
+            onClick={() => navigate("/Cart")}
+            className="btn card-btn-items"
+          >
+            Go to <BsFillCartFill />
+          </button>
         )}
         ;
-        
         {ItemInWishListCheck(id) === false ? (
           <button
             className="btn card-btn-items"
@@ -58,7 +61,7 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
             }
             defaultChecked
           >
-            Add To wishlist
+            Add To <BsFillHeartFill />
           </button>
         ) : (
           <button
@@ -68,7 +71,7 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
             }
             defaultChecked
           >
-            Delete from WishList
+            Delete from <BsFillHeartFill />
           </button>
         )}
       </div>

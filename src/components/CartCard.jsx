@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/cartContext";
-import { useWishList } from "../context/wishListContext";
-import { ItemInWishListCheck } from "../backend/utils/wishListReducer";
-import { CartCheckOut } from "../components/component";
+import { BsFillCartFill } from "react-icons/bs";
 
 export default function CartCard({ id, title, image, price, quantity }) {
-  const { dispatchWish } = useWishList();
   const [count, setCount] = useState(quantity);
   const { dispatchCart } = useCart();
   const cartDefault = {
@@ -25,69 +22,58 @@ export default function CartCard({ id, title, image, price, quantity }) {
   }, [count, dispatchCart, id]);
 
   return (
-    <article className="prod-in-cart">
-      <div className="image">
-        <img src={image} alt={title} />
-      </div>
-      <div className="prod-detail">
-        <div className="text text-align-left">
-          <p className="large-text">{title}</p>
-          <p className="large-text">Rs.{price}</p>
-          <p className="grey-text">40% OFF</p>
-          <p className="quant">
-            <label>Quantity: </label>
+    <>
+      <article className="prod-in-cart">
+        <div className="image">
+          <img src={image} alt={title} />
+        </div>
+        <div className="prod-detail">
+          <div className="text text-align-left">
+            <p className="large-text">{title}</p>
+            <p className="large-text">Rs.{price}</p>
+            <p className="grey-text">40% OFF</p>
+            <p className="quant">
+              <label>Quantity: </label>
+              <button
+                className="btn btn-primary"
+                onClick={() => setCount(count - 1)}
+                defaultChecked
+              >
+                &nbsp;-&nbsp;
+              </button>
+              <input
+                type="text"
+                name="cartInput"
+                value={count}
+                onChange={(e) => {
+                  setCount(e.target.value);
+                }}
+              />
+              <button
+                className="btn btn-primary"
+                onClick={() => setCount(count + 1)}
+                defaultChecked
+              >
+                &nbsp;+&nbsp;
+              </button>
+            </p>
+          </div>
+          <div className="button card-buttons text-align-center">
             <button
-              className="btn btn-primary"
-              onClick={() => setCount(count - 1)}
+              className="btns upper-text"
+              onClick={() =>
+                dispatchCart({
+                  type: "CART_DEL",
+                  payload: cartDefault,
+                })
+              }
               defaultChecked
             >
-              &nbsp;-&nbsp;
+              Remove from <BsFillCartFill />
             </button>
-            <input
-              type="text"
-              name="cartInput"
-              value={count}
-              onChange={(e) => {
-                setCount(e.target.value);
-              }}
-            />
-            <button
-              className="btn btn-primary"
-              onClick={() => setCount(count + 1)}
-              defaultChecked
-            >
-              &nbsp;+&nbsp;
-            </button>
-          </p>
+          </div>
         </div>
-        <div className="button">
-          <button
-            className="btns upper-text"
-            onClick={() =>
-              dispatchCart({
-                type: "CART_DEL",
-                payload: cartDefault,
-              })
-            }
-            defaultChecked
-          >
-            Remove from Cart
-          </button>
-          <button
-            className="btns upper-text"
-            onClick={
-              !ItemInWishListCheck(id)
-                ? () => dispatchWish({ type: "WISH_ADD", payload: cartDefault })
-                : () => {}
-            }
-            defaultChecked
-          >
-            Add to wishlist
-          </button>
-        </div>
-      </div>
-
-      <CartCheckOut />
-    </article>
+      </article>
+    </>
   );
 }

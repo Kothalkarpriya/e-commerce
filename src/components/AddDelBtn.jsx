@@ -1,14 +1,15 @@
 import React from "react";
-import { useWishList } from "../context/wishListContext";
-import { useCart } from "../context/cartContext";
+import { useWishList, useCart } from "../context/context";
 import { ItemInCart } from "../backend/utils/cartReducer";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { BsFillCartFill, BsFillHeartFill } from "react-icons/bs";
 
 export default function AddDelBtn(defaultState) {
   const { dispatchWish } = useWishList();
   const { dispatchCart } = useCart();
+  const navigate = useNavigate();
   return (
-    <div>
+    <>
       {ItemInCart(defaultState.defaultState.id) === false ? (
         <button
           type="submit"
@@ -20,12 +21,15 @@ export default function AddDelBtn(defaultState) {
             })
           }
         >
-          Add to Cart
+          Add to <BsFillCartFill />
         </button>
       ) : (
-        <Link to="/Cart" className="btn card-btn-items">
-          Go to Cart
-        </Link>
+        <button
+          className="btn card-btn-items"
+          onClick={() => navigate("/Cart")}
+        >
+          Go to <BsFillCartFill />
+        </button>
       )}
       <button
         type="submit"
@@ -34,8 +38,8 @@ export default function AddDelBtn(defaultState) {
           dispatchWish({ type: "WISH_DEL", payload: defaultState.defaultState })
         }
       >
-        Delete From WishList
+        Delete <BsFillHeartFill />
       </button>
-    </div>
+    </>
   );
 }

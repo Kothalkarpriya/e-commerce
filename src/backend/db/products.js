@@ -86,7 +86,7 @@ export const products = [
     isLiked: false,
     rating: 4,
     title: "Men Black Shirt",
-    price: "1000",
+    price: "580",
     categoryName: "men-cloth",
   },
   {
@@ -95,7 +95,7 @@ export const products = [
     isLiked: false,
     rating: 4,
     title: "Kid Dungaree Set",
-    price: "1000",
+    price: "1500",
     categoryName: "kid-cloth",
   },
   {
@@ -230,7 +230,7 @@ export const products = [
     isLiked: false,
     rating: 3,
     title: "Printed Cotton Slim Fit",
-    price: "1000",
+    price: "890",
     categoryName: "men-cloth",
   },
   {

@@ -159,7 +159,7 @@ export default function Filter() {
           </ul>
         </div>
         <div className="prod-sorting">
-          <div className="filter-heading">Category</div>
+          <div className="filter-heading">Filter by Price</div>
           <ul className="filter-list">
             <li className="filter-list-item">
               <input
@@ -173,7 +173,7 @@ export default function Filter() {
                   filterDispatch({ type: "SORT", payload: e.target.value })
                 }
               />
-              <label htmlFor="sortByPrice">Price(Low to High)</label>
+              <label htmlFor="sortByPrice">Low to High</label>
             </li>
             <li className="filter-list-item">
               <input
@@ -187,8 +187,11 @@ export default function Filter() {
                   filterDispatch({ type: "SORT", payload: e.target.value })
                 }
               />
-              <label htmlFor="sortByPrice">Price(High to Low)</label>
+              <label htmlFor="sortByPrice">High to Low</label>
             </li>
+          </ul>
+          <div className="filter-heading">Filter by Price</div>
+          <ul className="filter-list">
             <li className="filter-list-item">
               <input
                 className="mg-sm"

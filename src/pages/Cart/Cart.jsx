@@ -1,5 +1,5 @@
 import React from "react";
-import { CartCard, EmptyProd } from "../../components/component";
+import { CartCard, EmptyProd, CartCheckOut } from "../../components/component";
 import { useCart } from "../../context/cartContext";
 
 export default function Cart() {
@@ -21,12 +21,14 @@ export default function Cart() {
     });
   };
   return (
-    <section className="main-section">
-      <div className="prod-heading upper-text">My Cart(1)</div>
-      <div className="cart-container">
-        {Cart.length ? CartMapping() : EmptyProd("CARTLIST")}
-        
-      </div>
+    <section className="main-section cart-page">
+      <article>
+        <div className="prod-heading upper-text">My Cart(1)</div>
+        <div className="cart-container">
+          {Cart.length ? CartMapping() : EmptyProd("CARTLIST")}
+        </div>
+      </article>
+      {Cart.length && <CartCheckOut />}
     </section>
   );
 }
