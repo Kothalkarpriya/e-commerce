@@ -4,10 +4,10 @@ import { useCart } from "../../context/cartContext";
 
 export default function Cart() {
   const { state } = useCart();
-  const Cart = state.CartItems;
+  const cart = state.CartItems;
 
   const CartMapping = () => {
-    return Cart.map((item) => {
+    return cart.map((item) => {
       return (
         <CartCard
           key={item.id}
@@ -21,14 +21,16 @@ export default function Cart() {
     });
   };
   return (
+    <div className="sample">
     <section className="main-section cart-page">
       <article>
-        <div className="prod-heading upper-text">My Cart(1)</div>
+        <div className="prod-heading upper-text">My Cart</div>
         <div className="cart-container">
-          {Cart.length ? CartMapping() : EmptyProd("CARTLIST")}
+          {cart.length ? CartMapping() : EmptyProd("CARTLIST")}
         </div>
       </article>
-      {Cart.length && <CartCheckOut />}
+      {cart?.length && <CartCheckOut />}
     </section>
+    </div>
   );
 }

@@ -51,8 +51,15 @@ body {
 
 .nav-list-group {
     list-style: none;
+    margin: 0;
 }
 
+.nav-list-group .icon{
+    font-size: 1.3rem;
+    margin: 0;
+    margin-inline-end: 10px;
+    color: var(--white-color);
+}
 .nav-list-group .list-ele, .vert .list-ele button {
     color: var(--little-dark-grey);
     display: inline;
@@ -446,6 +453,24 @@ table {
     background-color: var(--light-grey);
     color:var(--text-col);
     box-shadow: var(--all-side-bold-shadow);
+}
+
+.footer {
+    padding: 0.5rem;
+}
+
+.footer p{
+    margin: 0;
+}
+
+.pagewrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sample{
+    flex-grow: 1;
 }
 
 @media only screen and (max-width: 800px) {

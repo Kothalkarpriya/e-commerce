@@ -4,7 +4,7 @@ import Routespath from "./routes/Routespath";
 
 function App() {
   return (
-    <div>
+    <div className="pagewrap">
       <Navbar />
       <Routespath />
       <Footer />

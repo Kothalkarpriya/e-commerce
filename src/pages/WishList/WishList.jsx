@@ -21,7 +21,7 @@ export default function WishList() {
     });
   };
   return (
-    <main>
+    <main className="sample">
       <section className="main-section">
         <div className="prod-heading upper-text">My Wishlist</div>
         <div className="wishlist-container">
