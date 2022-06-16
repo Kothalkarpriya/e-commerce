@@ -8,6 +8,7 @@ import {
   Signup,
 } from "../pages/index";
 import RouteAuth from "./RouteAuth";
+import { Address, PlaceOrder } from "../components/component";
 
 export default function Routespath() {
   return (
@@ -26,6 +27,23 @@ export default function Routespath() {
         element={
           <RouteAuth>
             <WishList />
+          </RouteAuth>
+        }
+      />
+      <Route
+        path="/address"
+        element={
+          <RouteAuth>
+            <Address />
+          </RouteAuth>
+        }
+      />
+
+      <Route
+        path="/placeorder"
+        element={
+          <RouteAuth>
+            <PlaceOrder />
           </RouteAuth>
         }
       />
