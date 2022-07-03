@@ -410,7 +410,8 @@ i:hover {
 }
 
 .prod-price-detail {
-    margin: 1rem;
+    max-width: 300px;
+    margin: 0;
     display: flex;
     height: max-content;
     flex-direction: column;
@@ -429,10 +430,14 @@ table {
     padding: 0.5rem;
     width: 100%;
 }
+.note{
+    margin: 0;
+    padding: 2px;
+}
 
 .table-2 {
     font-weight: bold;
-    margin: 1rem 0;
+    margin: 0;
     border-top: 1px solid var(--text-col);
     border-bottom: 1px solid var(--text-col);
 }
@@ -486,6 +491,11 @@ table {
 
 .sample {
     flex-grow: 1;
+}
+@media only screen and (max-width:900px) {
+    .navbar{
+         padding: 10px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
