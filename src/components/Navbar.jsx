@@ -1,8 +1,11 @@
-import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import { BsFillHeartFill, BsFillCartFill } from "react-icons/bs";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useAuth } from "../context/context";
 
 export default function Navbar() {
+  const { logout, isLoggedIn } = useAuth();
+  const navigate = useNavigate();
   return (
     <nav className="navbar">
       <div className="nav-brand upper-text">
@@ -17,20 +20,32 @@ export default function Navbar() {
         </div>
         <ul className="nav-list-group vert">
           <li className="list-ele">
-            <Link to="/Signup" className="nav-link">
-              Login
-            </Link>
+            {isLoggedIn ? (
+              <button
+                onClick={() => {
+                  navigate("/");
+                  logout();
+                }}
+                className="nav-link"
+              >
+                Logout
+              </button>
+            ) : (
+              <button onClick={() => navigate("/login")} className="nav-link">
+                Login
+              </button>
+            )}
           </li>
           <li className="list-ele">
-            <Link to="/WishList" className="nav-link">
-              <AiOutlineHeart />
-            </Link>
+            <button onClick={() => navigate("/WishList")} className="nav-link">
+              <BsFillHeartFill className="icon" /> Wishlist
+            </button>
           </li>
           <li className="list-ele">
-            <Link to="/Cart" className="nav-link">
-              <AiOutlineShoppingCart />
+            <button onClick={() => navigate("/Cart")} className="nav-link">
+              <BsFillCartFill className="icon" />
               Cart
-            </Link>
+            </button>
           </li>
         </ul>
       </div>

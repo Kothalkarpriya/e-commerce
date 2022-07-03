@@ -19,7 +19,7 @@ function CartReducer(state, action) {
         ...state,
         CartItems: state.CartItems.map((item) => {
           item.quantity =
-            item.id === action.payload.if
+            item.id === action.payload.id
               ? action.payload.quantity
               : item.quantity;
           return item;

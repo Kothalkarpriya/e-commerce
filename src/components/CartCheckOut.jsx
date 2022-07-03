@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCart } from "../context/cartContext";
+import { Address } from "../components/component";
 
 export default function CartCheckOut() {
+  const [display, setDisplay] = useState(false);
   const { state } = useCart();
   const total = state.CartItems.reduce(
     (acc, currVal) => {
@@ -12,7 +14,6 @@ export default function CartCheckOut() {
     },
     { total: 0, count: 0 }
   );
-
   let Discount = 0.2 * total.total;
   let delivery = 20 * total.count;
   return (
@@ -48,9 +49,17 @@ export default function CartCheckOut() {
           </tbody>
         </table>
         <p className="note">You will save Rs. {Discount} on this order</p>
-
-        <button className="btn upper-text">Place Order</button>
+        <button
+          className="btn upper-text"
+          onClick={() => {
+            setDisplay((dis) => !dis);
+          }}
+        >
+          Place Order
+        </button>
       </div>
+
+      {display && <Address />}
     </article>
   );
 }

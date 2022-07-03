@@ -6,8 +6,10 @@ import WishCard from "./WishCard";
 import AddDelBtn from "./AddDelBtn";
 import EmptyProd from "./EmptyProd";
 import CartCheckOut from "./CartCheckOut";
-
 import CartCard from "./CartCard";
+import Address from "./Address";
+import PlaceOrder from "./PlaceOrder";
+
 export {
   Navbar,
   Footer,
@@ -17,5 +19,7 @@ export {
   AddDelBtn,
   EmptyProd,
   CartCard,
-  CartCheckOut
+  CartCheckOut,
+  Address,
+  PlaceOrder,
 };
