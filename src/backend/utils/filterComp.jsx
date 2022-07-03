@@ -1,6 +1,5 @@
 function ratingFun(state, prodList) {
   const { rating } = state;
-  // console.log(prodList);
   return rating === ""
     ? prodList
     : prodList.filter((product) => product.rating >= rating);

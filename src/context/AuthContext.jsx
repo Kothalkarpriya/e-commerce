@@ -11,6 +11,8 @@ const AuthContextProvider = ({ children }) => {
     token: null,
   });
 
+  const localStorageToken = JSON.parse(localStorage.getItem("loginToken"));
+  const token = localStorageToken?.token || "";
   const { isLoggedIn } = authState;
   const navigate = useNavigate();
   const location = useLocation();
@@ -55,7 +57,7 @@ const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ authState, isLoggedIn, login, logout, signup }}
+      value={{ authState, isLoggedIn, login, logout, signup, token }}
     >
       {children}
     </AuthContext.Provider>

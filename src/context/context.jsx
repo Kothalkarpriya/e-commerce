@@ -4,6 +4,7 @@ import { CartContextPro, useCart } from "./cartContext";
 import { ProdContext, useProd } from "./prodContext";
 import { CategoryContextPro, GetCategory } from "./categoryContext";
 import { AuthContextProvider, useAuth } from "./AuthContext";
+import { AddressContextProvider, useAddress } from "./addressContext";
 
 export {
   FilterContextPro,
@@ -18,4 +19,6 @@ export {
   GetCategory,
   AuthContextProvider,
   useAuth,
+  AddressContextProvider,
+  useAddress,
 };
