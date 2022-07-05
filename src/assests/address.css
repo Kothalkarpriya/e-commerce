@@ -27,7 +27,7 @@
 }
 
 .place-order-container {
-     margin: 2rem;
+     margin: auto;
      padding: 2rem;
      display: flex;
      justify-content: center;
@@ -50,4 +50,15 @@
 
 .place-order-container .upper-text {
      font-size: 1.5rem;
+}
+
+@media only screen and (max-width:500px) {
+     .place-order-container {
+          max-width: max-content;
+          padding: 1rem;
+     }
+     
+     .place-order-container article{
+          padding: 1rem;
+     }
 }
