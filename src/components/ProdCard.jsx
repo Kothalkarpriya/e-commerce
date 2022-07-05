@@ -52,7 +52,6 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
             Go to <BsFillCartFill />
           </button>
         )}
-        ;
         {ItemInWishListCheck(id) === false ? (
           <button
             className="btn card-btn-items"
@@ -71,7 +70,7 @@ export default function ProdCard({ id, cardTitle, cardPrice, image }) {
             }
             defaultChecked
           >
-            Delete from <BsFillHeartFill />
+            Delete <BsFillHeartFill />
           </button>
         )}
       </div>
