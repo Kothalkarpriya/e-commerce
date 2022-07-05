@@ -107,7 +107,7 @@ i:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0;
 }
 
 .main-section {
@@ -133,14 +133,14 @@ i:hover {
 /* card */
 .card {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     padding: 1rem;
-    gap: 1rem;
+    gap: 5px;
 }
 
 .main-section .container-horizon {
-    margin: 1rem;
+    margin: 0;
     max-width: 35rem;
     background-color: var(--little-light-grey);
 }
@@ -401,7 +401,9 @@ i:hover {
 }
 
 .prod-in-cart .button .btns,
-.table button, .address-container button.btn, .place-order-container button.btn {
+.table button,
+.address-container button.btn,
+.place-order-container button.btn {
     width: 80%;
     margin-top: 0.3rem;
     padding: 0.5rem;
@@ -430,7 +432,8 @@ table {
     padding: 0.5rem;
     width: 100%;
 }
-.note{
+
+.note {
     margin: 0;
     padding: 2px;
 }
@@ -492,9 +495,10 @@ table {
 .sample {
     flex-grow: 1;
 }
+
 @media only screen and (max-width:900px) {
-    .navbar{
-         padding: 10px;
+    .navbar {
+        padding: 10px;
     }
 }
 

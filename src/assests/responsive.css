@@ -1,0 +1,13 @@
+@media only screen and (max-width:900px){
+     .card .img-horizon{
+          width:120px;
+     }
+
+     .main-section .text-horizon{
+          padding: 2px;
+     }
+
+     .card{
+          padding: 2px;
+     }
+}

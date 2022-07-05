@@ -1,15 +1,13 @@
-/* eslint-disable no-unused-vars */
 import { createContext, useContext, useState } from "react";
 import useAxios from "../backend/utils/axiosProd";
 
 const ProductContext = createContext();
 function ProdContext({ children }) {
-
   const [api, setApi] = useState("/api/products");
-  const { loading, error, dataResponse } = useAxios(api);
-  const products = dataResponse?.products||[];
+  const { dataResponse } = useAxios(api);
+  const products = dataResponse?.products || [];
   return (
-    <ProductContext.Provider value={{ products }}>
+    <ProductContext.Provider value={{ products, setApi }}>
       {children}
     </ProductContext.Provider>
   );

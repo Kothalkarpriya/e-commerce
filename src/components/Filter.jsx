@@ -24,7 +24,7 @@ export default function Filter() {
             value={state.price}
             name="sortby"
             min="500"
-            max="2000"
+            max="1000"
             id="myRange"
             className="default-slider"
             onClick={(e) =>
