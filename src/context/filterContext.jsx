@@ -19,13 +19,13 @@ const filter =
   };
 
 const FilterContextPro = ({ children }) => {
-  const {products} = useProd();
+  const { products } = useProd();
 
   const [state, filterDispatch] = useReducer(filterReducer, {
     sort: "",
     rating: 1,
     category: [],
-    maxPrice: 2000,
+    maxPrice: 1000,
   });
 
   const filteredList = filter(

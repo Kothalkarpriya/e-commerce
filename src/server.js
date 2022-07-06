@@ -1,5 +1,4 @@
 import { Server, Model, RestSerializer } from "miragejs";
-import { v4 as uuid } from "uuid";
 import {
   loginHandler,
   signupHandler,
@@ -24,13 +23,6 @@ import {
   removeItemFromWishlistHandler,
 } from "./backend/controllers/WishlistController";
 
-import {
-  getAddressHandler,
-  addAddressHandler,
-  removeAddressHandler,
-  updateAddressHandler,
-} from "./backend/controllers/AddressController";
-
 import { categories } from "./backend/db/categories";
 import { products } from "./backend/db/products";
 import { users } from "./backend/db/users";
@@ -47,7 +39,6 @@ export function makeServer({ environment = "development" } = {}) {
       user: Model,
       cart: Model,
       wishlist: Model,
-      address: Model,
     },
 
     // Runs on the start of the server
@@ -65,18 +56,6 @@ export function makeServer({ environment = "development" } = {}) {
           ...item,
           cart: [],
           wishlist: [],
-          address: [
-            {
-              _id: uuid(),
-              name: "Priya Kothalkar",
-              street: "Aurangabad Airport",
-              city: "Aurangabad",
-              state: "Maharashtra",
-              country: "India",
-              zipCode: 431001,
-              mobile: 9096622430,
-            },
-          ],
         })
       );
 
@@ -109,12 +88,6 @@ export function makeServer({ environment = "development" } = {}) {
         "/user/cart/:productId",
         removeItemFromCartHandler.bind(this)
       );
-
-      // address routes
-      this.get("/user/address", getAddressHandler.bind(this));
-      this.post("/user/address", addAddressHandler.bind(this));
-      this.post("/user/address/:addressId", updateAddressHandler.bind(this));
-      this.delete("/user/address/:addressId", removeAddressHandler.bind(this));
 
       // wishlist routes (private)
       this.get("/user/wishlist", getWishlistItemsHandler.bind(this));

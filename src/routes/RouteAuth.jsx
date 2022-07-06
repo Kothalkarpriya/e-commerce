@@ -8,6 +8,6 @@ export default function RouteAuth({ children }) {
   return isLoggedIn ? (
     children
   ) : (
-    <Navigate to="/login" state={{ from: location }} replace/>
+    <Navigate to="/login" state={{ from: location }} replace />
   );
 }

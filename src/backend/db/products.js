@@ -41,7 +41,7 @@ export const products = [
     isLiked: false,
     rating: 4,
     title: "Women Western Top",
-    price: "2000",
+    price: "1000",
     categoryName: "women-cloth",
   },
   {
@@ -95,7 +95,7 @@ export const products = [
     isLiked: false,
     rating: 4,
     title: "Kid Dungaree Set",
-    price: "1500",
+    price: "1000",
     categoryName: "kid-cloth",
   },
   {

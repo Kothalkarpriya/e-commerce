@@ -64,8 +64,8 @@ export default function Signup() {
               </div>
 
               <div className="input-block-check">
-                <input type="checkbox" className="accept-ele" required />I accept
-                all Terms & condition
+                <input type="checkbox" className="accept-ele" required />I
+                accept all Terms & condition
               </div>
               <div className="input-block">
                 <button className="signup-btn">Create New Account</button>

@@ -107,7 +107,8 @@ i:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0;
+    flex-grow: 1;
 }
 
 .main-section {
@@ -133,14 +134,14 @@ i:hover {
 /* card */
 .card {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     padding: 1rem;
-    gap: 1rem;
+    gap: 5px;
 }
 
 .main-section .container-horizon {
-    margin: 1rem;
+    margin: 0;
     max-width: 35rem;
     background-color: var(--little-light-grey);
 }
@@ -401,7 +402,9 @@ i:hover {
 }
 
 .prod-in-cart .button .btns,
-.table button, .address-container button.btn, .place-order-container button.btn {
+.table button,
+.address-container button.btn,
+.place-order-container button.btn {
     width: 80%;
     margin-top: 0.3rem;
     padding: 0.5rem;
@@ -430,7 +433,8 @@ table {
     padding: 0.5rem;
     width: 100%;
 }
-.note{
+
+.note {
     margin: 0;
     padding: 2px;
 }
@@ -489,12 +493,60 @@ table {
     min-height: 100vh;
 }
 
+ul.nav-list-group {
+    display: flex;
+    align-items: center;
+}
+
+.vert .list-ele .nav-btn {
+    display: inline-flex;
+    align-items: center;
+}
+
 .sample {
     flex-grow: 1;
 }
+
+.product-container .card-btn-items {
+    margin: 2px;
+}
+
+.card .container:hover {
+    box-shadow: var(--all-side-bold-shadow);
+}
+
 @media only screen and (max-width:900px) {
-    .navbar{
-         padding: 10px;
+    .navbar {
+        padding: 10px;
+    }
+
+    .card .img-horizon {
+        width: 120px;
+    }
+
+    .main-section .text-horizon {
+        padding: 2px;
+    }
+
+    .card {
+        padding: 2px;
+    }
+
+    .nav-collapse {
+        padding: 0;
+    }
+
+    .nav-list-group,
+    .nav-list-group .list-ele {
+        padding: 0;
+    }
+
+    .nav-list-group .list-ele {
+        margin: 5px;
+    }
+
+    .nav-list-group .list-ele button {
+        padding: 0.5rem;
     }
 }
 
@@ -535,46 +587,106 @@ table {
         padding: 0.2rem;
     }
 
-    .navbar .list-ele {
-        font-size: medium;
+    .nav-list-group .list-ele {
+        font-size: 1rem;
         padding: 0;
     }
-}
 
-@media only screen and (max-width:500px) {
-    .container-horizon {
-        width: fit-content;
-    }
-
+    .product-cards,
     .img-cards {
-        width: 50%;
+        padding: 0.5rem;
     }
 
-    .nav-brand {
-        font-size: larger;
+    .img-ad {
+        width: 100%;
     }
 
-    .nav-list-group {
-        padding: 0.2rem;
+    .filter-aside .prod-head {
+        padding: 0.5rem;
     }
 
-    .nav-collapse {
-        padding: 0.2rem;
+    .prod-head .prod-brand,
+    .prod-heading {
+        font-size: 1.5rem;
     }
 
-    .navbar .list-ele {
-        font-size: small;
+    .prod-price,
+    .prod-category,
+    .prod-rating,
+    .prod-sorting {
+        margin: 0.5rem;
+    }
+
+    ul.filter-list {
+        margin: 0;
+    }
+
+    .card .img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card .container {
+        width: 200px;
+        height: 300px;
+    }
+
+    .large-text,
+    .small-text,
+    .grey-text,
+    .quant {
+        margin: 0;
+    }
+
+    .large-text {
+        font-size: 0.8rem;
+    }
+
+    .cart-page .large-text {
+        font-size: 1.1rem;
+    }
+
+    .cart-page .cart-container {
         padding: 0;
+        margin: 0;
     }
+
+    .prod-in-cart {
+        margin: 10px 0;
+    }
+
+    .prod-price-detail {
+        margin: 10px;
+        padding: 0.5rem;
+    }
+
+    .prod-in-cart img {
+        width: 10rem;
+        height: 12rem;
+    }
+
+    .prod-detail {
+        margin: 0;
+    }
+
 }
+
 
 @media only screen and (max-width:600px) {
     .product-cards {
         display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+        justify-content: center;
     }
 
     .img-cards {
-        width: 30%;
+        width: 20%;
+        padding: 5px;
+    }
+
+    .product-cards img {
+        height: 7rem;
     }
 
     .hamburger .fa-bars {
@@ -601,9 +713,21 @@ table {
         display: none;
     }
 
+    .nav-list-group .icon {
+        margin-inline-end: 2px;
+    }
+
+    .vert .list-ele .nav-link,
+    .nav-list-group .icon {
+        font-size: 1rem;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
     .navbar .vert {
-        /* display: flex; */
-        flex-direction: column;
+        flex-direction: row;
         justify-content: flex-end;
     }
 
@@ -614,4 +738,142 @@ table {
         padding: 0.5rem;
         width: 100%;
     }
+
+    .main-section {
+        margin: 0;
+    }
+
+    .product-container {
+        gap: 5px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .container-horizon {
+        width: fit-content;
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .img-cards {
+        width: 20%;
+    }
+
+    .product-cards img {
+        height: 5rem;
+    }
+
+    .nav-brand {
+        font-size: larger;
+    }
+
+    .nav-list-group {
+        padding: 0.2rem;
+    }
+
+    .nav-collapse {
+        padding: 0.2rem;
+    }
+
+    .navbar .list-ele {
+        font-size: small;
+        padding: 0;
+    }
+
+    .nav-list-group .list-ele button {
+        padding: 5px;
+    }
+
+    .nav-list-group .icon {
+        margin-inline-end: 2px;
+    }
+
+    .vert .list-ele .nav-link,
+    .nav-list-group .icon {
+        font-size: 0.7rem;
+    }
+
+    .nav-brand {
+        font-size: 1rem;
+    }
+
+    .text-badge {
+        font-size: 1rem;
+    }
+
+    .branding {
+        padding: 0.5rem;
+    }
+
+    .main-section .text-horizon h3 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-section .container-horizon {
+        max-width: 20rem;
+    }
+
+    .main-section {
+        margin: 0.5rem;
+    }
+
+    .login,
+    .signup-form,
+    .login-form {
+        padding: 0.5rem;
+    }
+
+    .signup .heading,
+    .login .heading {
+        margin: 2px;
+    }
+
+    .product-container {
+        grid-template-columns: 150px 1fr;
+    }
+
+    .prod-head .prod-brand,
+    .prod-heading {
+        font-size: 1.2rem;
+    }
+
+    .filter-heading {
+        font-size: 0.9rem;
+    }
+
+    .filter-list-item {
+        font-size: 0.7rem;
+    }
+
+    .card .img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card .container {
+        width: 150px;
+        height: 250px;
+    }
+
+    .card .container:hover {
+        box-shadow: none;
+    }
+
+    .card-buttons .card-btn-items {
+        font-size: 0.7rem;
+    }
+
+    .cart-page {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .cart-page .large-text{
+        font-size: 1rem;
+    }
+    
 }

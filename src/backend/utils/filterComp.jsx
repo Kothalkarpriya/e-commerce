@@ -7,7 +7,7 @@ function ratingFun(state, prodList) {
 
 function priceFun(state, prodList) {
   const { maxPrice } = state;
-  return prodList.filter((product) => product.price <= maxPrice)||[];
+  return prodList.filter((product) => product.price <= maxPrice) || [];
 }
 
 function sortProd(state, prodList) {
